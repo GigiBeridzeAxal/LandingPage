@@ -1,0 +1,22 @@
+body,
+* {
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    user-select: none;
+}
+/* Custom Toast Styles for Error */
+.toast-error {
+    background-color: red !important;   /* Red background for error */
+    color: white !important;            /* White text for error */
+  }
+  
+  /* Custom Toast Styles for Success */
+  .toast-success {
+    background-color: green !important; /* Green background for success */
+    color: white !important;            /* White text for success */
+    text-align: center;                 /* Centered text */
+  }
+  
