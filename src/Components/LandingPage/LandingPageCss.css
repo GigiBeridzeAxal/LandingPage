@@ -1,0 +1,22 @@
+
+
+.landinglogin{
+    border: solid 1px grey;
+    padding: 8px 15px;
+    display: inline-block;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #fff;
+    margin-left: 23px;
+}
+
+.carousel{
+    display: flex;
+    overflow-x: hidden;
+    overflow: hidden;
+    width: 100%;
+    height: fit-content;
+}
+.carousel-item{
+    min-width: fit-content;
+}
