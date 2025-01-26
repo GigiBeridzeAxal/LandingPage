@@ -32,10 +32,11 @@ import LoginWithPhone from './Components/LoginWithPhone/LoginWithPhone';
 import LoginWithEmail from './Components/LoginWithEmail/LoginWithEmail';
 import LoginWithGoogle from './Components/Login/Login';
 import LoginWithPassword from './Components/LoginWithPassword/LoginWithPassword';
+import LandingPage from './Components/LandingPage/LandingPage';
 
 function App() {
   const PrivateWrapper = () => {
-    return isAuthenticated() ? <Outlet /> : <Navigate to="/login" />;
+    return isAuthenticated() ? <Outlet /> : <Navigate to="/landingpage" />;
   };
 
   return (
@@ -43,6 +44,7 @@ function App() {
       <div className="">
         <Routes>
           <Route path="/login" element={<LoginWithPassword />} />
+          <Route path="/landingpage" element={<LandingPage />} />
           <Route path="/google" element={<LoginWithGoogle />} />
           <Route path="/email-auth" element={<LoginWithEmail />} />
           <Route path="/phone-auth" element={<LoginWithPhone />} />
