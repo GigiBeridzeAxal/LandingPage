@@ -10,13 +10,40 @@
     margin-left: 23px;
 }
 
-.slick-dots li {
 
-}
 body{
     overflow: hidden;
     overflow-x: hidden;
 }
+
+
+@media (max-width:760px) {
+
+    .notmember{
+        display: none;
+    }
+    
+}
+@media (max-width:531px) {
+
+   .right{
+    flex-direction: column;
+    display: flex !important;
+    gap: 5px;
+    
+   }
+    
+}
+@media (max-width:349px) {
+
+   .left{
+
+    width: 30%;
+
+   }
+     
+ }
+ 
 
 
 
