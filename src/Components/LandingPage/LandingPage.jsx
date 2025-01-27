@@ -176,6 +176,7 @@ export default function LandingPage() {
               onMouseUpCapture={MosueUPcapt}
               onMouseLeave={Mouseleave}
               onMouseOverCapture={(e) => MouseOver(e)}
+              onTouchStart={MouseDown}
               
               
               className="questions flex items-center ">
@@ -273,7 +274,7 @@ export default function LandingPage() {
 
             </div>
             <br />
-            <div className="desc">I've been playing on Dream11 for many years and I have won earlier too. This time I won a Mega Contest! I'm an avid cricket follower. The best part was I got my winnings instantly into my bank account after the withdrawal.</div>
+            <div className="desc">One of the many reasons why I trust Dream11 is because I get my winnings safely and instantly after the contest gets over. I also used my own cricket knowledge to enhance my fantasy cricket skills.</div>
           </div>
 <br />
           
@@ -299,18 +300,28 @@ export default function LandingPage() {
 
             </div>
             <br />
-            <div className="desc">I've been playing on Dream11 for many years and I have won earlier too. This time I won a Mega Contest! I'm an avid cricket follower. The best part was I got my winnings instantly into my bank account after the withdrawal.</div>
+            <div className="desc">I used to always watch cricket and analyse the game. It was all about doing some good research and putting skills to work. I'm glad my knowledge and skills got rewarded and I won the Mega Contest.</div>
           </div>
 
         </div>
 
 
       </div>
+      <br /><br />
+
+      <div className="faqtittle text-[24px]">FAQ</div>
+
+      <br /><br />
 
       <div className="faq">
         <div className="faqframe">
 
-          
+          <div className="faqlist">
+            <div className="faqquestion">What is Fantasy Sports? <div className="arrow"></div></div>
+            <div className="faqanswer"></div>
+          </div>
+
+
         </div>
       </div>
       
