@@ -385,14 +385,15 @@ export default function LandingPage() {
       <br /><br />
 
       <div className="faq flex items-center text-[14px] justify-center w-[100%]">
-        <div className="faqframe flex flex-col items-center  gap-[10px] w-[60%]">
+        <div className="faqframe flex flex-col items-center   gap-[10px] w-[60%]">
 
           {faqs.map((data , ind) => (
 
 
-         <motion.button onClick={() => HandleOpen(ind)} className="faqquestionframe  w-[80%]">
-         <div className="faqquest flex items-center justify-between w-[100%]">{data.QuestionTittle} {data.Opened == true ? <div className="arrow"><img width={30} src="Collapse.png" alt="" /></div> : <div className="arrow"><img width={30} src="Expand.png" alt="" /></div>} </div>
-          <motion.div exit={{display:'none',height:0 , opacity:0}} initial={{ display:'none',height:0 , opacity:0 }} animate={data.Opened == true ? {height:'max-content' , opacity:1 , display:'block'} : null}  className="faqanswer  flex items-start">{data.Answer}</motion.div>
+         <motion.button onClick={() => HandleOpen(ind)} className="faqquestionframe relative  w-[80%]">
+         <div className="faqquest flex items-center  justify-between w-[100%]">{data.QuestionTittle} {data.Opened == true ? <div className="arrow"><img width={30} src="Collapse.png" alt="" /></div> : <div className="arrow"><img width={30} src="Expand.png" alt="" /></div>} </div>
+
+          <motion.div  exit={{    height:0 , opacity:0 ,  }}  initial={{ height:0 , bottom:'0px' , opacity:0 }}  animate={data.Opened == true ? { height:'max-content' , marginTop:'10px'   , opacity:1} : null}  className="faqanswer  flex items-start">{data.Answer}</motion.div>
        </motion.button>
 
           ))}
