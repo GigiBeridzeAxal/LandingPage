@@ -69,6 +69,29 @@ body{
 .howtoplayvideo{
     max-width: 900px;
 }
+.questions{
+    overflow: hidden;
+    overflow-x: scroll;
+
+    width: 100%;
+    gap: 15px;
+}
+
+.questions::-webkit-scrollbar{
+    background: none;
+    width: 3px;
+    height: 3px;
+    
+}
+
+.quest{
+    width: 100%;
+    min-width: 239px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+
+}
 
 
 @media (max-width:450px) {
@@ -116,6 +139,14 @@ body{
     }
     
 }
+@media (max-width:475px) {
+    .manname{
+        display: none;
+    }
+    .stars{
+        gap: 3px;
+    }
+}
 @media (max-width:531px) {
  
 
@@ -128,6 +159,9 @@ body{
    }
    .landingpageheader {
     width: 100%;
+   }
+   .stars img{
+    width: 20px;
    }
 
     
