@@ -189,11 +189,11 @@ export default function LandingPage() {
 
 
               <div className="chooser flex gap-[10px]">
-                {currentslide == 1 ? <input checked type='checkbox' /> :<input checked={false}  type='checkbox' /> }
-                {currentslide == 2 ? <input checked type='checkbox' /> :<input  type='checkbox' /> }
-                {currentslide == 3 ? <input checked type='checkbox' /> :<input  type='checkbox' /> }
-                {currentslide == 4 ? <input checked type='checkbox' /> :<input  type='checkbox' /> }
-                {currentslide == 5 ? <input checked type='checkbox' /> :<input  type='checkbox' /> }
+                {currentslide == 1 ? <input checked={currentslide == 1 ? true : false} type='radio' /> :<input checked={false}  type='radio' /> }
+                {currentslide == 2 ? <input checked={currentslide == 2 ? true : false} type='radio' /> :<input  type='radio' /> }
+                {currentslide == 3 ? <input checked={currentslide == 3 ? true : false} type='radio' /> :<input  type='radio' /> }
+                {currentslide == 4 ? <input checked={currentslide == 4 ? true : false} type='radio' /> :<input  type='radio' />}
+                {currentslide == 5 ? <input checked={currentslide == 5 ? true : false} type='radio' /> :<input  type='radio' />}
 
 
 
@@ -316,7 +316,7 @@ export default function LandingPage() {
       <div className="faq">
         <div className="faqframe">
 
-          <div className="faqlist">
+          <div className="faqquestion">
             <div className="faqquestion">What is Fantasy Sports? <div className="arrow"></div></div>
             <div className="faqanswer"></div>
           </div>

@@ -34,9 +34,9 @@ body{
     max-width: 350px;
 }
 .steps{
-    flex-wrap: wrap;
+
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     gap: 60px;
 }
 .stepnumber{
@@ -98,6 +98,31 @@ body{
 }
 
 
+
+@media (max-width:1400px) {
+
+    .steps{
+
+        align-items: center;
+        justify-content: space-between;
+        gap: 60px;
+        width: 100%;
+    }
+    .startplayingframe {
+        width: 95%;
+    }
+
+}
+@media (max-width:1100px) {
+    .steps{
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 60px;
+        width: 100%;
+    }
+
+}
 @media (max-width:450px) {
     .UserRating img{
         width: 60px;
