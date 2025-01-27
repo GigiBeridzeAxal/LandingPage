@@ -1,0 +1,240 @@
+
+
+.landinglogin{
+    border: solid 1px grey;
+    padding: 8px 15px;
+    display: inline-block;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #fff;
+    margin-left: 23px;
+}
+
+
+body{
+
+  
+}
+.carousel-container{
+    max-width: 100%;
+    overflow: hidden;
+}
+.CarouselImages{
+    min-height: 940px !important;
+    min-width: 100%;
+    box-sizing: border-box;
+    object-fit: cover;
+  
+}
+.step{
+    padding: 10px;
+    box-shadow: 2px 2px 2px 2px rgb(208, 208, 208);
+    border-radius: 5px;
+
+    max-width: 350px;
+}
+.steps{
+
+    align-items: center;
+    justify-content: space-around;
+    gap: 60px;
+}
+.stepnumber{
+    position: absolute;
+    padding: 10px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 18px;
+    top: 33%;
+    left: -22px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.tutorialbox{
+
+    box-shadow: 2px 2px 2px 2px rgb(208, 208, 208);
+    background-color: white;
+    width: 70%;
+    display: flex;
+    min-width: 239px;
+    
+
+
+    left: 15%;
+}
+
+
+.stepframe{
+    padding: 20px;
+}
+.howtoplayvideo{
+    max-width: 900px;
+}
+.questions{
+    overflow: hidden;
+    overflow-x: scroll;
+
+    width: 100%;
+    gap: 15px;
+}
+
+.questions::-webkit-scrollbar{
+    background: none;
+    width: 3px;
+    height: 3px;
+    
+}
+
+.quest{
+    width: 100%;
+    min-width: 239px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+
+}
+
+
+.faqquestionframe{
+    border: 1px solid  rgb(203, 203, 203);
+    border-radius: 5px;
+    width: 80%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: start;
+
+    justify-content: space-between;
+}
+@media (max-width:1400px) {
+
+    .steps{
+
+        align-items: center;
+        justify-content: space-between;
+        gap: 60px;
+        width: 100%;
+    }
+    .startplayingframe {
+        width: 95%;
+    }
+
+}
+@media (max-width:1100px) {
+    .steps{
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 60px;
+        width: 100%;
+    }
+
+}
+@media (max-width:450px) {
+    .UserRating img{
+        width: 60px;
+    }
+
+
+}
+@media (max-width:1050px) {
+
+    .UserRating{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .ratingvalue{
+        font-size: 12px;
+        text-align: center;
+    }
+    .ratingtittle{
+        text-align: center;
+        font-size: 0.8rem !important;
+    }
+    .ratingframe{
+        justify-content: space-around;
+        width: 100%;
+        gap: 10px;
+    }
+
+
+      
+  }
+
+  
+  
+
+@media (max-width:760px) {
+
+    .notmember{
+        display: none;
+    }
+    
+}
+@media (max-width:475px) {
+    .manname{
+        display: none;
+    }
+    .stars{
+        gap: 3px;
+    }
+}
+@media (max-width:531px) {
+ 
+
+   .right{
+    gap: 5px;
+    font-size: 14px;
+   }
+   .landinglogin{
+    margin-left: 0px;
+   }
+   .landingpageheader {
+    width: 100%;
+   }
+   .stars img{
+    width: 20px;
+   }
+
+    
+}
+
+@media (max-width:367px) {
+
+    .left{
+ 
+     width: 30%;
+ 
+    }
+
+      
+  }
+@media (max-width:313px) {
+
+   .left{
+
+    width: 30%;
+
+   }
+   .right{
+    gap: 5px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+   }
+     
+ }
+ 
+
+
+
