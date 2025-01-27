@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import Slider from 'react-slick';
+import {motion} from 'framer-motion'
 
 
 
@@ -15,7 +16,44 @@ export default function LandingPage() {
   const QuestionsRef = useRef()
   const [MouseAcitvated , SetMouseActivated] = useState(false)
   const [startx , setstartx] = useState(0)
-  const [currentslide , setcurrentslide] = useState(1)
+  const [currentslide , setcurrentslide] = useState(0)
+  const [faqs , setfaqs] = useState([
+
+    {
+      Opened:false,
+      QuestionTittle:"What is Fantasy Sports? ",
+      Answer:"Fantasy sports is a strategy-based online sports game where you can create a virtual team of real players, playing in live matches worldwide. You earn points and win cash prizes based on the performances of these players in actual matches."
+    },
+    {
+      Opened:false,
+      QuestionTittle:"What is Fantasy Sports? ",
+      Answer:"Fantasy sports is a strategy-based online sports game where you can create a virtual team of real players, playing in live matches worldwide. You earn points and win cash prizes based on the performances of these players in actual matches."
+    },
+    {
+      Opened:false,
+      QuestionTittle:"What is Fantasy Sports? ",
+      Answer:"Fantasy sports is a strategy-based online sports game where you can create a virtual team of real players, playing in live matches worldwide. You earn points and win cash prizes based on the performances of these players in actual matches."
+    },
+    {
+      Opened:false,
+      QuestionTittle:"What is Fantasy Sports? ",
+      Answer:"Fantasy sports is a strategy-based online sports game where you can create a virtual team of real players, playing in live matches worldwide. You earn points and win cash prizes based on the performances of these players in actual matches."
+    },
+    {
+      Opened:false,
+      QuestionTittle:"What is Fantasy Sports? ",
+      Answer:"Fantasy sports is a strategy-based online sports game where you can create a virtual team of real players, playing in live matches worldwide. You earn points and win cash prizes based on the performances of these players in actual matches."
+    },
+    
+
+
+  ])
+
+
+
+
+
+
   const slidewidth = 245
 
     const settings = {
@@ -30,6 +68,31 @@ export default function LandingPage() {
       autoplay: true,
       autoplaySpeed: 2000,
     };
+
+    const HandleOpen = (ind) => {
+      
+
+
+      setfaqs((perv) => (
+        perv.map((faq, i) => (
+          i === ind ? { ...faq, Opened: !faq.Opened } : faq
+        ))
+
+
+
+      ))
+
+    }
+
+    const scrollbyradio = (currentslideer) => {
+      console.log(currentslideer)
+      setcurrentslide(currentslideer )
+      QuestionsRef.current.scrollTo({
+        left: Math.round(255 * currentslideer ),
+        behavior: 'smooth',
+      });
+    
+    }
 
     const MosueUP = (e) => {
       SetMouseActivated(false)
@@ -46,7 +109,7 @@ export default function LandingPage() {
         }
         // Scroll to the next slide with smooth behavior
         QuestionsRef.current.scrollTo({
-          left: Math.round(255 * currentslide),
+          left: Math.round(255 * (currentslide + 1)),
           behavior: 'smooth',
         });
       
@@ -54,13 +117,13 @@ export default function LandingPage() {
       } else {
         // Dragging to the right
         SetMouseActivated(false);
-        if (currentslide > 1) {
+        if (currentslide > 0) {
           setcurrentslide((perv => (perv - 1)));
    
         }
         // Scroll to the previous slide with smooth behavior
         QuestionsRef.current.scrollTo({
-          left: 255 * (currentslide - 2),
+          left: 255 * (currentslide - 1),
           behavior: 'smooth',
         });
       
@@ -155,9 +218,10 @@ export default function LandingPage() {
             <div className="stepnumber bg-orange-500">1</div>
             <strong className="steptittle">Select A Match</strong>
             <div className="setpdesc mb-[10px]">Select Upcoming Match That You Want To Play</div>
+            <div className="tutorialframe flex items-center justify-center w-[100%]">
             <div className="tutorialbox p-[5px] justify-between items-center"><img width={30} src="RCB.png" alt="" /> <div className="rcbvstittle">RCB vs CSK</div> <img width={45} src="CSK.png" alt="" /> </div>
             </div>
-           
+            </div>
           </div>
 
           <div className="stepfirst step relative">
@@ -165,6 +229,10 @@ export default function LandingPage() {
             <div className="stepnumber bg-orange-500">2</div>
             <strong className="steptittle">Answer 5 Questions</strong>
             <div className="setpdesc mb-[10px]">Use your circketing skills and pick the correct answers for 5 questions</div>
+            <div className="tutorialframe flex items-center justify-center w-[100%]">
+
+
+          
             <div className="tutorialbox flex flex-col items-center justify-center p-[5px]">
 
 
@@ -176,7 +244,8 @@ export default function LandingPage() {
               onMouseUpCapture={MosueUPcapt}
               onMouseLeave={Mouseleave}
               onMouseOverCapture={(e) => MouseOver(e)}
-              onTouchStart={MouseDown}
+     
+              
               
               
               className="questions flex items-center ">
@@ -189,15 +258,16 @@ export default function LandingPage() {
 
 
               <div className="chooser flex gap-[10px]">
-                {currentslide == 1 ? <input checked={currentslide == 1 ? true : false} type='radio' /> :<input checked={false}  type='radio' /> }
-                {currentslide == 2 ? <input checked={currentslide == 2 ? true : false} type='radio' /> :<input  type='radio' /> }
-                {currentslide == 3 ? <input checked={currentslide == 3 ? true : false} type='radio' /> :<input  type='radio' /> }
-                {currentslide == 4 ? <input checked={currentslide == 4 ? true : false} type='radio' /> :<input  type='radio' />}
-                {currentslide == 5 ? <input checked={currentslide == 5 ? true : false} type='radio' /> :<input  type='radio' />}
+                {currentslide == 0 ? <input checked={currentslide == 0 ? true : false} type='radio' /> :<input onClick={() => scrollbyradio(0)} checked={false}  type='radio' /> }
+                {currentslide == 1 ? <input checked={currentslide == 1 ? true : false} type='radio' /> :<input onClick={() => scrollbyradio(1)} checked={false}  type='radio' /> }
+                {currentslide == 2 ? <input checked={currentslide == 2 ? true : false} type='radio' /> :<input onClick={() => scrollbyradio(2)}  checked={false} type='radio' /> }
+                {currentslide == 3 ? <input checked={currentslide == 3 ? true : false} type='radio' /> :<input onClick={() => scrollbyradio(3)} checked={false} type='radio' />}
+                {currentslide == 4 ? <input checked={currentslide == 4 ? true : false} type='radio' /> :<input onClick={() => scrollbyradio(4)} checked={false} type='radio' />}
 
 
 
               
+              </div>
               </div>
             </div>
             </div>
@@ -209,13 +279,14 @@ export default function LandingPage() {
             <div className="stepnumber bg-orange-500">3</div>
             <strong className="steptittle">Join Free Contest</strong>
             <div className="setpdesc mb-[10px]">Join Free Contests And Win Free Rewards</div>
+            <div className="tutorialframe flex items-center justify-center w-[100%]">
             <div className="tutorialbox flex items-center justify-center flex-col">
               <strong className="winiphonetittle flex items-center justify-center gap-[5px] p-[5px]">Win Iphone <img width={30} src="Iphone.png" alt="" /></strong>
               <div className="freejoin w-[100%] flex items-center justify-center bg-green-500 text-white">Join Free</div>
               
                </div>
             </div>
-           
+            </div>
           </div>
 
         </div>
@@ -313,13 +384,22 @@ export default function LandingPage() {
 
       <br /><br />
 
-      <div className="faq">
-        <div className="faqframe">
+      <div className="faq flex items-center text-[14px] justify-center w-[100%]">
+        <div className="faqframe flex flex-col items-center  gap-[10px] w-[60%]">
 
-          <div className="faqquestion">
-            <div className="faqquestion">What is Fantasy Sports? <div className="arrow"></div></div>
-            <div className="faqanswer"></div>
-          </div>
+          {faqs.map((data , ind) => (
+
+
+         <motion.button onClick={() => HandleOpen(ind)} className="faqquestionframe  w-[80%]">
+         <div className="faqquest flex items-center justify-between w-[100%]">{data.QuestionTittle} {data.Opened == true ? <div className="arrow"><img width={30} src="Collapse.png" alt="" /></div> : <div className="arrow"><img width={30} src="Expand.png" alt="" /></div>} </div>
+          <motion.div exit={{display:'none',height:0 , opacity:0}} initial={{ display:'none',height:0 , opacity:0 }} animate={data.Opened == true ? {height:'max-content' , opacity:1 , display:'block'} : null}  className="faqanswer  flex items-start">{data.Answer}</motion.div>
+       </motion.button>
+
+          ))}
+
+ 
+
+
 
 
         </div>

@@ -20,7 +20,7 @@ body{
     overflow: hidden;
 }
 .CarouselImages{
-    min-height: 700px !important;
+    min-height: 940px !important;
     min-width: 100%;
     box-sizing: border-box;
     object-fit: cover;
@@ -56,11 +56,13 @@ body{
     
 }
 .tutorialbox{
-    position: absolute;
+
     box-shadow: 2px 2px 2px 2px rgb(208, 208, 208);
     background-color: white;
     width: 70%;
     display: flex;
+    min-width: 239px;
+    
 
 
     left: 15%;
@@ -98,7 +100,18 @@ body{
 }
 
 
-
+.faqquestionframe{
+    border: 1px solid  rgb(203, 203, 203);
+    border-radius: 5px;
+    width: 80%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: start;
+    gap: 10px;
+    justify-content: space-between;
+}
 @media (max-width:1400px) {
 
     .steps{
