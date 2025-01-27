@@ -17,6 +17,44 @@ body{
 }
 
 
+@media (max-width:450px) {
+    .UserRating img{
+        width: 60px;
+    }
+
+
+}
+@media (max-width:1050px) {
+
+    .UserRating{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .ratingvalue{
+        font-size: 12px;
+        text-align: center;
+    }
+    .ratingtittle{
+        text-align: center;
+        font-size: 0.8rem !important;
+    }
+    .ratingframe{
+        justify-content: space-around;
+        width: 100%;
+        gap: 10px;
+    }
+
+
+      
+  }
+
+  
+  
+
 @media (max-width:760px) {
 
     .notmember{
@@ -25,21 +63,44 @@ body{
     
 }
 @media (max-width:531px) {
+ 
 
    .right{
-    flex-direction: column;
-    display: flex !important;
     gap: 5px;
-    
+    font-size: 14px;
    }
+   .landinglogin{
+    margin-left: 0px;
+   }
+   .landingpageheader {
+    width: 100%;
+   }
+
     
 }
-@media (max-width:349px) {
+
+@media (max-width:367px) {
+
+    .left{
+ 
+     width: 30%;
+ 
+    }
+
+      
+  }
+@media (max-width:313px) {
 
    .left{
 
     width: 30%;
 
+   }
+   .right{
+    gap: 5px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
    }
      
  }
