@@ -116,6 +116,13 @@ body{
 
     justify-content: space-between;
 }
+@media (max-width:800px) {
+    .faqquestionframe{
+        width: 100%;}
+}
+.faqframe{
+    width: 100%;
+}
 @media (max-width:1100px) {
     .CarouselImages{
         object-fit: cover;
