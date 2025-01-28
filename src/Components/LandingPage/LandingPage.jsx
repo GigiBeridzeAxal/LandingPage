@@ -435,10 +435,10 @@ export default function LandingPage() {
       </div>
       <div className="footer w-[100%]  ">
         <div className="footerframe flex   p-[20px] justify-around w-[100%]">
-          <div className="firstline flex  flex-col"><img width={160} src="Super5 logo.png" alt="" />
+          <div className="firstline flex  flex-col"><img width={135} src="Super5 logo.png" alt="" />
           <br />
           <div className="socialstittle">Socials</div>
-          <div className="socials flex items-center gap-[5px]"><img width={30} src="Facebook.png" alt="" /> <img width={30} src="Instagram.png" alt="" /></div>
+          <div className="socials flex items-center gap-[5px]"><a href=""><img width={30} src="Facebook.png" alt="" /></a> <a href=""><img width={30} src="Instagram.png" alt="" /></a> </div>
           </div>
           <div className="navigate flex gap-[5px] flex-col">
             <strong className="navigatetittle text-[24px]">Navigate</strong>
