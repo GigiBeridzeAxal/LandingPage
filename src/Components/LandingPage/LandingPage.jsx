@@ -212,7 +212,7 @@ export default function LandingPage() {
       <div className="landingpageheader flex items-center justify-between w-[80%]">
         <div className="left"><img width={120} src="Super5 logo.png" alt="" /></div>
         <div className="right flex items-center justify-center gap-[20px] text-white">
-            <div className="landingregister flex items-center justify-center gap-[10px]"> <div className="notmember">Not a Member Yet? </div> <a className='text-red-400' href="/login ">Register Now</a></div>
+            <div className="landingregister flex items-center justify-center gap-[10px] "> <div className="notmember ">Not a Member Yet? </div> <a className='text-red-400' href="/login ">Register Now</a></div>
             <a href='/login' className="landinglogin p-[5px] p-[5px]">Log In</a>
         </div>
       </div>
@@ -236,7 +236,7 @@ export default function LandingPage() {
     <div className="StartPlaying w-[100%] flex items-center justify-center mt-[60px]">
       <div className="startplayingframe w-[80%] flex flex-col gap-[30px] items-center justify-center">
 
-        <div className="startplaytittle flex items-center gap-[5px] flex-wrap">its 3 simple steps to start playing <div className="text-red-600">on Dream11</div></div>
+        <div className="startplaytittle flex items-center gap-[5px] flex-wrap">its 3 simple steps to start playing <div className="text-red-600">on SUPER5</div></div>
       
               <div className="steps w-[100%] flex items-center justify-between">
 
@@ -349,15 +349,14 @@ className="questions flex items-center ">
         
 
         </div>
-        <br /><br />
+ 
       
 
   
-      <br /><br />
-      <iframe  className='w-[100%] howtoplayvideo' width="1024" height="458" src="https://www.youtube.com/embed/8RoDqWFEoZQ" title="Dream11: How to Play on Dream11" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe className='w-[100%] howtoplayvideo' width="1280" height="725" src="https://www.youtube.com/embed/YfVIdRifAsY" title="29 January 2025" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe  className='w-[100%] howtoplayvideo' width="1024" height="458" src="https://www.youtube.com/watch?v=YfVIdRifAsY" title="Dream11: How to Play on Dream11" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       <div className="faqtittle text-[24px]">FAQ</div>
 
-      <br /><br />
 
       <div className="faq flex items-center text-[14px] justify-center w-[100%]">
         <div className="faqframe flex flex-col items-center   gap-[10px] w-[60%]">
