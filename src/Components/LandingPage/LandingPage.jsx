@@ -68,7 +68,7 @@ export default function LandingPage() {
 
     useEffect(() => {
       if(window){
-        setheight(window.innerHeight - 10)
+        setheight(window.innerHeight - 70)
       }
       if(window){
         if(window.innerWidth < 900){
@@ -81,7 +81,7 @@ export default function LandingPage() {
 
       window.addEventListener('resize' , (e) => {
         if(window){
-          setheight(e.innerHeight - 10)
+          setheight(e.innerHeight - 70)
         }
         if(e.currentTarget.innerWidth < 900){
           setdesktop(false)
