@@ -68,7 +68,7 @@ export default function LandingPage() {
 
     useEffect(() => {
       if(window){
-        setheight(window.innerHeight)
+        setheight(window.innerHeight - 10)
       }
       if(window){
         if(window.innerWidth < 900){
@@ -81,7 +81,7 @@ export default function LandingPage() {
 
       window.addEventListener('resize' , (e) => {
         if(window){
-          setheight(e.innerHeight)
+          setheight(e.innerHeight - 10)
         }
         if(e.currentTarget.innerWidth < 900){
           setdesktop(false)
@@ -422,11 +422,45 @@ export default function LandingPage() {
 
         </div>
       </div>
+
+      
       
       <br /><br />
+
+   
+
         </div>
 
 
+      </div>
+      <div className="footer w-[100%]  ">
+        <div className="footerframe flex   p-[20px] justify-around w-[100%]">
+          <div className="firstline flex  flex-col"><img width={120} src="Super5 logo.png" alt="" />
+          <br /><br />
+          <div className="socialstittle">Socials</div>
+          <div className="socials flex items-center gap-[5px]"><img width={30} src="Facebook.png" alt="" /> <img width={30} src="Instagram.png" alt="" /></div>
+          </div>
+          <div className="navigate flex gap-[5px] flex-col">
+            <strong className="navigatetittle text-[24px]">Navigate</strong>
+            <a href="">About Us</a>
+            <a href="">How to Play</a>
+            <a href="">FAQ</a>
+            <a href="">Contact us</a>
+          </div>
+
+          <div className="navigate gap-[5px] flex flex-col">
+            <strong className="navigatetittle text-[24px]">Support</strong>
+            <a href="">Terms & Conditions</a>
+            <a href="">Privacy policy</a>
+          </div>
+
+          <div className="navigate flex gap-[5px] flex-col">
+            <strong className="navigatetittle text-[24px]">Contact</strong>
+            <a href="">Contact us</a>
+          </div>
+ 
+        </div>
+        <div className="copyright flex items-center justify-center">Copyright @2025 all rights reserved</div>
       </div>
     </div>
    

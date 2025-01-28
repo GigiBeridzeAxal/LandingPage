@@ -116,6 +116,29 @@ body{
 
     justify-content: space-between;
 }
+
+.footer{
+    box-shadow: 2px 2px 2px 2px rgb(203, 203, 203);
+}
+
+.copyright{
+    border-top: 1px solid rgb(238, 238, 238);
+    padding: 20px;
+}
+.footerframe{
+    flex-wrap: wrap;
+    gap: 25px;
+}
+@media (max-width:300px) {
+    .copyright{
+        font-size: 14px;
+    }
+    .footerframe{
+        flex-wrap: wrap;
+        justify-content: start;
+        gap: 25px;
+    }
+}
 @media (max-width:800px) {
     .faqquestionframe{
         width: 100%;}
