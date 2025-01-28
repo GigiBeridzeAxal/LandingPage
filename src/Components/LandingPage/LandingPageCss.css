@@ -30,11 +30,12 @@ body{
   
 }
 .step{
-    padding: 10px;
-    box-shadow: 2px 2px 2px 2px rgb(208, 208, 208);
-    border-radius: 5px;
 
+    box-shadow: 2px 2px 2px 2px rgb(208, 208, 208);
+    border-radius: 25px;
     max-width: 350px;
+    height: 160px;
+    font-size: 15px;
 }
 .steps{
 
@@ -42,11 +43,17 @@ body{
     justify-content: space-around;
     gap: 60px;
 }
+.tutorialbox{
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    height: 58px !important;
+    min-height: 58px !important;
+}
 .stepnumber{
-    position: absolute;
+
     padding: 10px;
-    width: 45px;
-    height: 45px;
+    width: 45px !important;
+    height: 45px !important;
     border-radius: 50%;
     font-weight: 700;
     font-size: 18px;
@@ -56,25 +63,24 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    min-width: 45px;
+    min-height: 45px;
     
 }
 .tutorialbox{
 
     box-shadow: 2px 2px 2px 2px rgb(208, 208, 208);
     background-color: white;
-    width: 70%;
+    width: 100%;
     display: flex;
     min-width: 239px;
     
 
 
-    left: 15%;
 }
 
 
-.stepframe{
-    padding: 20px;
-}
+
 .howtoplayvideo{
     max-width: 900px;
 }
@@ -82,7 +88,7 @@ body{
     overflow: hidden;
     overflow-x: scroll;
 
-    width: 100%;
+    width: 239px;
     gap: 15px;
 }
 
@@ -129,6 +135,24 @@ body{
     flex-wrap: wrap;
     gap: 25px;
 }
+.mainstepframe{
+    height: 77px !important;
+    min-height: 77px !important;
+    background-color: lightgray;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+.stepframe{
+    max-height: 120px;
+}
+.stepfirst{
+    max-height: 120px;
+    height: 120px !important;
+}
+.freejoin {
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
 @media (max-width:600px) {
     .footerframe{
         flex-wrap: wrap;
@@ -138,7 +162,8 @@ body{
 }
 @media (max-width:400px) {
     .stepframe{
-        width: 240px;
+        width: 270px;
+        font-size: 13px;
     }
 
 }

@@ -231,85 +231,115 @@ export default function LandingPage() {
 
 
           <div className="stepfirst step relative">
-            <div className="stepframe">
+            <div className="stepframe flex justify-between flex-col ">
+
+
+            <div className="mainstepframe gap-[10px] p-[5px] flex w-[100%]">
+
             <div className="stepnumber bg-orange-500">1</div>
-            <strong className="steptittle">Select A Match</strong>
-            <div className="setpdesc mb-[10px]">Select Upcoming Match That You Want To Play</div>
-            <div className="tutorialframe flex items-center justify-center w-[100%]">
-            <div className="tutorialbox p-[5px] justify-between items-center"><img width={30} src="RCB.png" alt="" /> <div className="rcbvstittle">RCB vs CSK</div> <img width={45} src="CSK.png" alt="" /> </div>
+            <div className="stepinfo">
+            <strong className="steptittle flex items-center gap-[5px]"> Select A Match</strong>
+            <div className="setpdesc ">Select Upcoming Match That You Want To Play</div>
+     
             </div>
+
+            
+            </div>
+            <div className="tutorialbox p-[5px] justify-around items-center"><img width={30} src="RCB.png" alt="" /> <div className="rcbvstittle">RCB vs CSK</div> <img width={45} src="CSK.png" alt="" /> </div>
+
             </div>
           </div>
 
           <div className="stepfirst step relative">
-            <div className="stepframe">
+            <div className="stepframe flex flex-col ">
+
+
+            <div className="mainstepframe gap-[10px] p-[5px] flex w-[100%]">
+
             <div className="stepnumber bg-orange-500">2</div>
+            <div className="stepinfo">
             <strong className="steptittle">Answer 5 Questions</strong>
-            <div className="setpdesc mb-[10px]">Use your circketing skills and pick the correct answers for 5 questions</div>
+            <div className="setpdesc ">Use your circketing skills and pick the correct answers for 5 questions</div>
+     
+            </div>
+
+            
+            </div>
             <div className="tutorialframe flex items-center justify-center w-[100%]">
 
 
           
+        
+
             <div className="tutorialbox flex flex-col items-center justify-center p-[5px]">
 
 
-              <div ref={QuestionsRef}
-              
-              onMouseDown={(e) => MouseDown(e)} 
-              onMouseUp={(e) =>MosueUP(e)}
-              onMouseMove={(e) => MouseMove(e)}
-              onMouseUpCapture={MosueUPcapt}
-              onMouseLeave={Mouseleave}
-              onMouseOverCapture={(e) => MouseOver(e)}
-     
-              
-              
-              
-              className="questions flex items-center ">
-              <strong className="quest mb-[5px]">1.  Who wins match</strong>
-              <strong className="quest mb-[5px]">2. RCB Top Run Scorer</strong>
-              <strong className="quest mb-[5px]">3. CSK Top Run Scorer</strong>
-              <strong className="quest mb-[5px]">4. RCB Top Wickets Taker</strong>
-              <strong className="quest mb-[5px]">5. ⁠CSK Top Wickets Taker</strong>
-              </div>
+<div ref={QuestionsRef}
 
-
-              <div className="chooser flex gap-[10px]">
-                {currentslide == 0 ? <input checked={currentslide == 0 ? true : false} type='radio' /> :<input onClick={() => scrollbyradio(0)} checked={false}  type='radio' /> }
-                {currentslide == 1 ? <input checked={currentslide == 1 ? true : false} type='radio' /> :<input onClick={() => scrollbyradio(1)} checked={false}  type='radio' /> }
-                {currentslide == 2 ? <input checked={currentslide == 2 ? true : false} type='radio' /> :<input onClick={() => scrollbyradio(2)}  checked={false} type='radio' /> }
-                {currentslide == 3 ? <input checked={currentslide == 3 ? true : false} type='radio' /> :<input onClick={() => scrollbyradio(3)} checked={false} type='radio' />}
-                {currentslide == 4 ? <input checked={currentslide == 4 ? true : false} type='radio' /> :<input onClick={() => scrollbyradio(4)} checked={false} type='radio' />}
+onMouseDown={(e) => MouseDown(e)} 
+onMouseUp={(e) =>MosueUP(e)}
+onMouseMove={(e) => MouseMove(e)}
+onMouseUpCapture={MosueUPcapt}
+onMouseLeave={Mouseleave}
+onMouseOverCapture={(e) => MouseOver(e)}
 
 
 
-              
-              </div>
-              </div>
+
+className="questions flex items-center ">
+<strong className="quest mb-[5px]">1.  Who wins match</strong>
+<strong className="quest mb-[5px]">2. RCB Top Run Scorer</strong>
+<strong className="quest mb-[5px]">3. CSK Top Run Scorer</strong>
+<strong className="quest mb-[5px]">4. RCB Top Wickets Taker</strong>
+<strong className="quest mb-[5px]">5. ⁠CSK Top Wickets Taker</strong>
+</div>
+
+
+<div className="chooser flex gap-[10px]">
+  {currentslide == 0 ? <input checked={currentslide == 0 ? true : false} type='radio' /> :<input onClick={() => scrollbyradio(0)} checked={false}  type='radio' /> }
+  {currentslide == 1 ? <input checked={currentslide == 1 ? true : false} type='radio' /> :<input onClick={() => scrollbyradio(1)} checked={false}  type='radio' /> }
+  {currentslide == 2 ? <input checked={currentslide == 2 ? true : false} type='radio' /> :<input onClick={() => scrollbyradio(2)}  checked={false} type='radio' /> }
+  {currentslide == 3 ? <input checked={currentslide == 3 ? true : false} type='radio' /> :<input onClick={() => scrollbyradio(3)} checked={false} type='radio' />}
+  {currentslide == 4 ? <input checked={currentslide == 4 ? true : false} type='radio' /> :<input onClick={() => scrollbyradio(4)} checked={false} type='radio' />}
+
+
+
+
+</div>
+</div>
+</div>
             </div>
-            </div>
-           
           </div>
 
+
           <div className="stepfirst step relative">
-            <div className="stepframe">
+            <div className="stepframe flex flex-col ">
+
+
+            <div className="mainstepframe gap-[10px] p-[5px] flex w-[100%]">
+
             <div className="stepnumber bg-orange-500">3</div>
+            <div className="stepinfo">
             <strong className="steptittle">Join Free Contest</strong>
-            <div className="setpdesc mb-[10px]">Join Free Contests And Win Free Rewards</div>
-            <div className="tutorialframe flex items-center justify-center w-[100%]">
+            <div className="setpdesc ">Join Free Contests And Win Free Rewards</div>
+     
+            </div>
+
+            
+            </div>
             <div className="tutorialbox flex items-center justify-center flex-col">
               <strong className="winiphonetittle flex items-center justify-center gap-[5px] p-[5px]">Win Iphone <img width={30} src="Iphone.png" alt="" /></strong>
               <div className="freejoin w-[100%] flex items-center justify-center bg-green-500 text-white">Join Free</div>
               
                </div>
-            </div>
+
             </div>
           </div>
+        
 
         </div>
         <br /><br />
-        <iframe  className='w-[100%] howtoplayvideo' width="1024" height="458" src="https://www.youtube.com/embed/8RoDqWFEoZQ" title="Dream11: How to Play on Dream11" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <br /><br />
+      
 
     <div className="reviewtittle text-[24px]">Reviews</div>
       <div className="reviews">
