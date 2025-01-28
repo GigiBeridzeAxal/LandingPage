@@ -52,6 +52,7 @@ export default function LandingPage() {
 
 
   const [desktop , setdesktop] = useState(true)
+  const [screenheight , setheight]  = useState(800)
 
 
 
@@ -66,7 +67,9 @@ export default function LandingPage() {
     };
 
     useEffect(() => {
-
+      if(window){
+        setheight(window.innerHeight)
+      }
       if(window){
         if(window.innerWidth < 900){
           setdesktop(false)
@@ -77,6 +80,9 @@ export default function LandingPage() {
       }
 
       window.addEventListener('resize' , (e) => {
+        if(window){
+          setheight(e.innerHeight)
+        }
         if(e.currentTarget.innerWidth < 900){
           setdesktop(false)
 
@@ -207,7 +213,7 @@ export default function LandingPage() {
     <div className="carousel-container">
 
       <div className=''>
-           <img  src={desktop == true ? "/Desktop.png"  : "/Mobile.png" } className='CarouselImages w-[100%]' />
+           <img style={{height:screenheight}} src={desktop == true ? "/Desktop.png"  : "/Mobile.png" } className='CarouselImages w-[100%]' />
       </div>
  
 
