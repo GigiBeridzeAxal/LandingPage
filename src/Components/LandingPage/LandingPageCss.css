@@ -115,6 +115,11 @@ body{
 
     justify-content: space-between;
 }
+@media (max-width:900px) {
+    .CarouselImages{
+        object-fit: fill;
+    }
+}
 @media (max-width:1400px) {
 
     .steps{
