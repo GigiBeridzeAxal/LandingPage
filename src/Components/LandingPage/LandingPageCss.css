@@ -150,10 +150,14 @@ body{
 }
 .mainstepframe{
     height: 77px !important;
+    width: 350px;
     min-height: 77px !important;
     background-color: lightgray;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
+}
+.setpdesc {
+    width: 220px;
 }
 .stepframe{
     max-height: 120px;
@@ -237,7 +241,7 @@ body{
     }
 
 }
-@media (max-width:1100px) {
+@media (max-width:1300px) {
     .steps{
         flex-wrap: wrap;
         align-items: center;

@@ -17,6 +17,17 @@ export default function LandingPage() {
   const [MouseAcitvated , SetMouseActivated] = useState(false)
   const [startx , setstartx] = useState(0)
   const [currentslide , setcurrentslide] = useState(0)
+
+
+
+  const [reviews , setreviews] = useState([
+    {
+      IMGURL:'',
+      Name:"What is Fantasy Sports? ",
+      Review:"Fantasy sports is a strategy-based online sports game where you can create a virtual team of real players, playing in live matches worldwide. You earn points and win cash prizes based on the performances of these players in actual matches."
+    }
+  ])
+
   const [faqs , setfaqs] = useState([
 
     {
@@ -341,92 +352,9 @@ className="questions flex items-center ">
         <br /><br />
       
 
-    <div className="reviewtittle text-[24px]">Reviews</div>
-      <div className="reviews">
-        <div className="reviewsframe">
-
-
-        <div className="review bg-gray-100 p-[20px]">
-            <div className="firstline flex items-center justify-between w-[100%]">
-              <div className="profile flex items-center gap-[5px] justify-start">
-                              <div className="manphoto"><img width={60} src="https://cdnflags.dream11.com/d11-static-pages/images/manasMalhotra.webp" alt="" /></div>
-              <div className="manname">Manas Malhotra</div>
-              
-              
-              </div>
-              <div className="stars flex items-center justify-center gap-[8px]">
-              <img width={30} src="Star.png" alt="" />
-              <img width={30} src="Star.png" alt="" />
-              <img width={30} src="Star.png" alt="" />
-              <img width={30} src="Star.png" alt="" />
-              <img width={30} src="Star.png" alt="" />
-              
-              </div>
-              
-
-
-            </div>
-            <br />
-            <div className="desc">I've been playing on Dream11 for many years and I have won earlier too. This time I won a Mega Contest! I'm an avid cricket follower. The best part was I got my winnings instantly into my bank account after the withdrawal.</div>
-          </div>
-<br />
-          
-          <div className="review bg-gray-100 p-[20px]">
-            <div className="firstline flex items-center justify-between w-[100%]">
-              <div className="profile flex items-center gap-[5px] justify-start">
-                              <div className="manphoto"><img width={60} src="https://cdnflags.dream11.com/d11-static-pages/images/AnujYadav.webp" alt="" /></div>
-              <div className="manname"> Anuj Yadav</div>
-              
-              
-              </div>
-              <div className="stars flex items-center justify-center gap-[8px]">
-              <img width={30} src="Star.png" alt="" />
-              <img width={30} src="Star.png" alt="" />
-              <img width={30} src="Star.png" alt="" />
-              <img width={30} src="Star.png" alt="" />
-              <img width={30} src="Star.png" alt="" />
-              
-              </div>
-              
-
-
-            </div>
-            <br />
-            <div className="desc">One of the many reasons why I trust Dream11 is because I get my winnings safely and instantly after the contest gets over. I also used my own cricket knowledge to enhance my fantasy cricket skills.</div>
-          </div>
-<br />
-          
-          <div className="review bg-gray-100 p-[20px]">
-            <div className="firstline flex items-center justify-between w-[100%]">
-              <div className="profile flex items-center gap-[5px] justify-start">
-                              <div className="manphoto"><img width={60} src="https://cdnflags.dream11.com/d11-static-pages/images/sagarBhagat.webp" alt="" /></div>
-              <div className="manname">
-              Sagar Bhagat</div>
-              
-              
-              </div>
-              <div className="stars flex items-center justify-center gap-[8px]">
-              <img width={30} src="Star.png" alt="" />
-              <img width={30} src="Star.png" alt="" />
-              <img width={30} src="Star.png" alt="" />
-              <img width={30} src="Star.png" alt="" />
-              <img width={30} src="Star.png" alt="" />
-              
-              </div>
-              
-
-
-            </div>
-            <br />
-            <div className="desc">I used to always watch cricket and analyse the game. It was all about doing some good research and putting skills to work. I'm glad my knowledge and skills got rewarded and I won the Mega Contest.</div>
-          </div>
-
-        </div>
-
-
-      </div>
+  
       <br /><br />
-
+      <iframe  className='w-[100%] howtoplayvideo' width="1024" height="458" src="https://www.youtube.com/embed/8RoDqWFEoZQ" title="Dream11: How to Play on Dream11" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       <div className="faqtittle text-[24px]">FAQ</div>
 
       <br /><br />
