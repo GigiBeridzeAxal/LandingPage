@@ -437,6 +437,9 @@ export default function LandingPage() {
         <div className="footerframe flex   p-[20px] justify-around w-[100%]">
           <div className="firstline flex  flex-col"><img width={135} src="Super5 logo.png" alt="" />
           <br />
+          <strong>Address</strong>
+          1234 Maple Street, Suite 567, Rivertown, TX 78901
+          <br /><br />
           <div className="socialstittle">Socials</div>
           <div className="socials flex items-center gap-[5px]"><a href=""><img width={30} src="Facebook.png" alt="" /></a> <a href=""><img width={30} src="Instagram.png" alt="" /></a> </div>
           </div>
@@ -449,13 +452,13 @@ export default function LandingPage() {
           </div>
 
           <div className="navigate gap-[5px] flex flex-col">
-            <strong className="navigatetittle text-[24px]">Support</strong>
+            <strong className="navigatetittle text-[24px]">Legal</strong>
             <a href="/www.trickit.now">Terms & Conditions</a>
             <a href="/www.trickit.now">Privacy policy</a>
           </div>
 
           <div className="navigate flex gap-[5px] flex-col">
-            <strong className="navigatetittle text-[24px]">Contact</strong>
+            <strong className="navigatetittle text-[24px]">Support</strong>
             <a href="/www.trickit.now">Contact us</a>
           </div>
  
