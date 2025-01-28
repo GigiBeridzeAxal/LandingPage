@@ -24,7 +24,7 @@ body{
 
     min-width: 100%;
     box-sizing: border-box;
-    background-image: url("./Desktop.png");
+
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -37,9 +37,7 @@ body{
 }
 
 @media (max-width:1100px) {
-    .CarouselImages{
-        background-image: url("./Mobile.png");
-    }
+
     
 }
 .step{

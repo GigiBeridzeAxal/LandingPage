@@ -224,7 +224,7 @@ export default function LandingPage() {
     <div className="carousel-container">
 
       <div className=''>
-           <img style={{height:screenheight}} className='CarouselImages w-[100%]' />
+      <img style={{height:screenheight}} src={desktop == true ? "/Desktop.png"  : "/Mobile.png" } className='CarouselImages w-[100%]' />
       </div>
  
 
