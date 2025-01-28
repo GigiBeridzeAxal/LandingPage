@@ -1,5 +1,5 @@
 'use client'
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import '../LandingPage/LandingPageCss.css'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -51,23 +51,41 @@ export default function LandingPage() {
 
 
 
+  const [desktop , setdesktop] = useState(true)
 
 
 
   const slidewidth = 245
 
     const settings = {
-      dots:true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1,
+
       draggable: true, // Enables drag functionality
       centerMode: false,
       focusOnSelect: true,
-      autoplay: true,
-      autoplaySpeed: 2000,
+
     };
+
+    useEffect(() => {
+
+      if(window){
+        if(window.innerWidth < 900){
+          setdesktop(false)
+
+        }else{
+          setdesktop(true)
+        }
+      }
+
+      window.addEventListener('resize' , (e) => {
+        if(e.currentTarget.innerWidth < 900){
+          setdesktop(false)
+
+        }else{
+          setdesktop(true)
+        }
+      })
+
+    },[])
 
     const HandleOpen = (ind) => {
       
@@ -187,21 +205,14 @@ export default function LandingPage() {
 
     </div>
     <div className="carousel-container">
-    <Slider  {...settings}>
+
       <div className=''>
-           <img className='CarouselImages' src="https://rcmg.in/fantasy/landingimg/acquistion/mainlpsbanners/my11circle-dlp-sliding-fs-banner-1.jpg?v=78" alt="" />
+           <img  src={desktop == true ? "/Desktop.png"  : "/Mobile.png" } className='CarouselImages w-[100%]' />
       </div>
-      <div>
-
-      <img  className='CarouselImages' src="https://rcmg.in/fantasy/landingimg/acquistion/mainlpsbanners/my11circle-dlp-sliding-fs-banner-2.jpg?v=7" alt="" />
-      </div>
-      <div>
-      <img className='CarouselImages'  src="https://rcmg.in/fantasy/landingimg/acquistion/mainlpsbanners/my11circle-dlp-sliding-fs-banner-4.jpg?v=3" alt="" />
-      </div>
+ 
 
 
 
-    </Slider>
 
     </div>
 
