@@ -129,6 +129,22 @@ body{
     flex-wrap: wrap;
     gap: 25px;
 }
+@media (max-width:600px) {
+    .footerframe{
+        flex-wrap: wrap;
+        justify-content: start;
+        gap: 25px;
+    }
+}
+@media (max-width:487px) {
+    .footerframe{
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        gap: 25px;
+    }
+}
 @media (max-width:300px) {
     .copyright{
         font-size: 14px;
