@@ -234,7 +234,7 @@ export default function LandingPage() {
     </div>
 
     <div className="StartPlaying w-[100%] flex items-center justify-center mt-[60px]">
-      <div className="startplayingframe w-[80%] flex flex-col gap-[30px] items-center justify-center">
+      <div className="startplayingframe w-[70%] flex flex-col gap-[30px] items-center justify-center">
 
         <div className="startplaytittle flex items-center gap-[5px] flex-wrap">its 3 simple steps to start playing <div className="text-red-600">on SUPER5</div></div>
       
@@ -247,7 +247,7 @@ export default function LandingPage() {
 
             <div className="mainstepframe gap-[10px] p-[5px] flex w-[100%]">
 
-            <div className="stepnumber bg-orange-500">1</div>
+            <div className="stepnumber  text-black ">1</div>
             <div className="stepinfo">
             <strong className="steptittle flex items-center gap-[5px]"> Select A Match</strong>
             <div className="setpdesc ">Select Upcoming Match That You Want To Play</div>
@@ -267,7 +267,7 @@ export default function LandingPage() {
 
             <div className="mainstepframe gap-[10px] p-[5px] flex w-[100%]">
 
-            <div className="stepnumber bg-orange-500">2</div>
+            <div className="stepnumber  text-black">2</div>
             <div className="stepinfo">
             <strong className="steptittle">Answer 5 Questions</strong>
             <div className="setpdesc ">Use your circketing skills and pick the correct answers for 5 questions</div>
@@ -329,7 +329,7 @@ className="questions flex items-center ">
 
             <div className="mainstepframe gap-[10px] p-[5px] flex w-[100%]">
 
-            <div className="stepnumber bg-orange-500">3</div>
+            <div className="stepnumber text-black">3</div>
             <div className="stepinfo">
             <strong className="steptittle">Join Free Contest</strong>
             <div className="setpdesc ">Join Free Contests And Win Free Rewards</div>
@@ -353,8 +353,8 @@ className="questions flex items-center ">
       
 
   
-        <iframe className='w-[100%] howtoplayvideo' width="1280" height="725" src="https://www.youtube.com/embed/YfVIdRifAsY" title="29 January 2025" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      <iframe  className='w-[100%] howtoplayvideo' width="1024" height="458" src="https://www.youtube.com/watch?v=YfVIdRifAsY" title="Dream11: How to Play on Dream11" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <br />
+        <iframe  className='w-[100%] howtoplayvideo' width="548" height="260" src="https://www.youtube.com/embed/q5DSFO8rA2o" title="Super5.live" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       <div className="faqtittle text-[24px]">FAQ</div>
 
 
@@ -390,7 +390,7 @@ className="questions flex items-center ">
 
 
       </div>
-      <div className="footer w-[100%]  ">
+      <div className="footer w-[100%] bg-gray-600 text-white ">
         <div className="footerframe flex   p-[20px] justify-around w-[100%]">
           <div className="firstline flex  flex-col"><img width={135} src="Super5 logo.png" alt="" />
           <br />
@@ -420,7 +420,7 @@ className="questions flex items-center ">
           </div>
  
         </div>
-        <div className="copyright flex items-center justify-center">Copyright @2025 all rights reserved</div>
+        <div className="copyright flex items-center justify-center bg-black">Copyright @2025 all rights reserved</div>
       </div>
     </div>
    
