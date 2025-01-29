@@ -358,7 +358,7 @@ className="questions flex items-center ">
       <div className="faqtittle text-[24px]">FAQ</div>
 
 
-      <div className="faq flex items-center text-[14px] justify-center w-[100%]">
+      <div className="faq flex items-center text-[14px] justify-center w-[100%] mb-[10px]">
         <div className="faqframe flex flex-col items-center   gap-[10px] w-[60%]">
 
           {faqs.map((data , ind) => (
@@ -390,7 +390,7 @@ className="questions flex items-center ">
 
 
       </div>
-      <div className="footer w-[100%] bg-black ">
+      <div className="footer w-[100%] bg-black text-white">
         <div className="footerframe flex   p-[20px] justify-around w-[100%]">
           <div className="firstline flex  flex-col"><img width={135} src="Super5 logo.png" alt="" />
           <br />
