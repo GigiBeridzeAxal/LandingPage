@@ -216,6 +216,9 @@ body{
     .firstline strong {
         font-size: 16px;
     }
+    .faqquestionframe {
+        width: 100% !important;
+    }
 }
 @media (max-width:300px) {
     .copyright{
@@ -277,6 +280,9 @@ body{
     }
     .howtoplayvideo{
         width: 100%;
+    }
+    .faqquestionframe {
+        width: 100% !important;
     }
 
 
