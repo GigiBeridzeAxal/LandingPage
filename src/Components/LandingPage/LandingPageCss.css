@@ -184,6 +184,10 @@ body{
     border-bottom-right-radius: 8px;
     border-bottom-left-radius: 8px;
 }
+.chooser input{
+    width: 10px;
+    height: 10px;
+}
 @media (max-width:600px) {
     .footerframe{
         flex-wrap: wrap;

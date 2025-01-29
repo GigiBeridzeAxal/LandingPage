@@ -20,14 +20,8 @@ export default function LandingPage() {
 
 
 
-  const [reviews , setreviews] = useState([
-    {
-      IMGURL:'',
-      Name:"What is Fantasy Sports? ",
-      Review:"Fantasy sports is a strategy-based online sports game where you can create a virtual team of real players, playing in live matches worldwide. You earn points and win cash prizes based on the performances of these players in actual matches."
-    }
-  ])
 
+  // Faq List To Show On Screen
   const [faqs , setfaqs] = useState([
 
     {
@@ -67,16 +61,18 @@ export default function LandingPage() {
 
 
 
-  const slidewidth = 245
+
 
     const settings = {
 
       draggable: true, // Enables drag functionality
       centerMode: false,
       focusOnSelect: true,
+      dots:true
 
     };
 
+    // Image Height By ScreenHeight
     useEffect(() => {
       if(window){
         setheight(window.innerHeight - 80)
@@ -103,7 +99,7 @@ export default function LandingPage() {
       })
 
     },[])
-
+    // Open/Close Faq
     const HandleOpen = (ind) => {
       
 
@@ -119,6 +115,7 @@ export default function LandingPage() {
 
     }
 
+        // Scroll Function For Radio Slider
     const scrollbyradio = (currentslideer) => {
       console.log(currentslideer)
       setcurrentslide(currentslideer )
@@ -224,7 +221,14 @@ export default function LandingPage() {
     <div className="carousel-container">
 
       <div className=''>
-      <img style={{height:screenheight}} src={desktop == true ? "/Desktop.png"  : "/Mobile.png" } className='CarouselImages w-[100%]' />
+
+        <Slider  {...settings} dots>
+
+        <img style={{height:screenheight}} src={desktop == true ? "/Desktop.png"  : "/Mobile.png" } className='CarouselImages w-[100%]' />
+        <img style={{height:screenheight}} src={desktop == true ? "/Desktop.png"  : "/Mobile.png" } className='CarouselImages w-[100%]' />
+        </Slider>
+
+
       </div>
  
 
@@ -282,7 +286,7 @@ export default function LandingPage() {
           
         
 
-            <div className="tutorialbox flex flex-col items-center justify-center p-[5px]">
+            <div className="tutorialbox flex flex-col items-center justify-center ">
 
 
 <div ref={QuestionsRef}
@@ -306,7 +310,7 @@ className="questions flex items-center ">
 </div>
 
 
-<div className="chooser flex gap-[10px]">
+<div className="chooser items-center justify-center flex gap-[10px]">
   {currentslide == 0 ? <input checked={currentslide == 0 ? true : false} type='radio' /> :<input onClick={() => scrollbyradio(0)} checked={false}  type='radio' /> }
   {currentslide == 1 ? <input checked={currentslide == 1 ? true : false} type='radio' /> :<input onClick={() => scrollbyradio(1)} checked={false}  type='radio' /> }
   {currentslide == 2 ? <input checked={currentslide == 2 ? true : false} type='radio' /> :<input onClick={() => scrollbyradio(2)}  checked={false} type='radio' /> }
