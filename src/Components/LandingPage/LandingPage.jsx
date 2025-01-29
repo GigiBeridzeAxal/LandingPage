@@ -66,7 +66,6 @@ export default function LandingPage() {
     const settings = {
 
 
-        dots:true,
         infinite: true,
         speed: 500,
         slidesToShow: 1,
@@ -142,7 +141,7 @@ export default function LandingPage() {
       if (startx - e.clientX > 0) {
         // Dragging to the left
         SetMouseActivated(false);
-        if (currentslide < 5) {
+        if (currentslide < 4) {
           setcurrentslide((perv => (perv + 1))); // Increment slide index
 
         }
@@ -225,14 +224,15 @@ export default function LandingPage() {
 
 
     </div>
-    <div className="carousel-container">
+    <div  style={{height:screenheight}} className="carousel-container">
 
-      <div className=''>
+      <div style={{height:screenheight}} className=''>
 
         <Slider  {...settings} dots>
+   
+        <img style={{height:screenheight}}  src={desktop == true ? "/Desktop.png"  : "/Mobile.png" } className='CarouselImages w-[100%]' />
+        <img   src={desktop == true ? "/Desktop.png"  : "/Mobile.png" } className='CarouselImages w-[100%]' style={{height:screenheight}} />
 
-        <img style={{height:screenheight}} src={desktop == true ? "/Desktop.png"  : "/Mobile.png" } className='CarouselImages w-[100%]' />
-        <img style={{height:screenheight}} src={desktop == true ? "/Desktop.png"  : "/Mobile.png" } className='CarouselImages w-[100%]' />
         </Slider>
 
 

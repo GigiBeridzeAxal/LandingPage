@@ -15,18 +15,24 @@ body{
 
   
 }
+
+
 .carousel-container{
     max-width: 100%;
     overflow: hidden;
 }
 .CarouselImages{
-    height: auto;
+
+
+
 
     min-width: 100%;
     box-sizing: border-box;
 
     background-repeat: no-repeat;
     background-size: cover;
+    object-fit: fill !important;
+    height: 90vh;
     width: 100%;
 
 
@@ -35,6 +41,7 @@ body{
 
   
 }
+
 .startplaytittle{
     font-size: 24px;
     text-align: center;
@@ -194,9 +201,7 @@ body{
     width: 10px;
     height: 10px;
 }
-.slick-dots{
- position: unset !important;
-}
+
 @media (max-width:600px) {
     .footerframe{
         flex-wrap: wrap;
