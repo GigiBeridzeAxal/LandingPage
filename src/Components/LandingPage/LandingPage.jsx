@@ -65,10 +65,17 @@ export default function LandingPage() {
 
     const settings = {
 
-      draggable: true, // Enables drag functionality
-      centerMode: false,
-      focusOnSelect: true,
-      dots:true
+
+        dots:true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        draggable: true, // Enables drag functionality
+        centerMode: false,
+        focusOnSelect: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
 
     };
 

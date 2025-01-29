@@ -188,6 +188,9 @@ body{
     width: 10px;
     height: 10px;
 }
+.slick-dots{
+ position: unset !important;
+}
 @media (max-width:600px) {
     .footerframe{
         flex-wrap: wrap;
