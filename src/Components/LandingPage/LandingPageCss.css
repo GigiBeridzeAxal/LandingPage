@@ -69,22 +69,28 @@ body{
     min-height: 58px !important;
 }
 .stepnumber{
-
+   position: absolute;
     padding: 10px;
     width: 35px !important;
     height: 35px !important;
     border-radius: 50%;
     font-weight: 700;
     font-size: 18px;
-    top: 33%;
+    top: 15%;
     left: -22px;
-    color:  black;
+
     display: flex;
     align-items: center;
     justify-content: center;
     min-width: 35px;
     min-height: 35px;
+    background-color: rgb(40, 138, 184);
+    border: 2px solid white;
+    color: white;
     
+}
+.mainstepframe{
+    padding-left: 20px;
 }
 .startplaytittle{
     font-weight: 700;
@@ -204,7 +210,7 @@ body{
         font-size: 13px;
     }
     .stepfirst{
-        width: 95%;
+        width: 90%;
     }
 
 }
