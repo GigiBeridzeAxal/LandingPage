@@ -353,8 +353,8 @@ className="questions flex items-center ">
       
 
   
-        <iframe className='w-[100%] howtoplayvideo' width="1280" height="725" src="https://www.youtube.com/embed/YfVIdRifAsY" title="29 January 2025" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      <iframe  className='w-[100%] howtoplayvideo' width="1024" height="458" src="https://www.youtube.com/watch?v=YfVIdRifAsY" title="Dream11: How to Play on Dream11" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe className='w-[100%] howtoplayvideo' width="1280" height="725" src="https://youtube.com/watch?v=q5DSFO8rA2o&si=r9E8pY8uGJP1oXGL " title="29 January 2025" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
       <div className="faqtittle text-[24px]">FAQ</div>
 
 
