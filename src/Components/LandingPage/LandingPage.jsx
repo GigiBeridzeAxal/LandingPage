@@ -233,7 +233,7 @@ export default function LandingPage() {
 
     </div>
 
-    <div className="StartPlaying w-[100%] flex items-center justify-center mt-[60px]">
+    <div className="StartPlaying w-[100%] flex items-center justify-center mt-[10px]">
       <div className="startplayingframe w-[80%] flex flex-col gap-[30px] items-center justify-center">
 
         <div className="startplaytittle flex items-center gap-[5px] flex-wrap">its 3 simple steps to start playing <div className="text-red-600">on SUPER5</div></div>
