@@ -382,7 +382,7 @@ className="questions flex items-center ">
 
       
       
-      <br /><br />
+      
 
    
 
@@ -390,7 +390,7 @@ className="questions flex items-center ">
 
 
       </div>
-      <div className="footer w-[100%]  ">
+      <div className="footer w-[100%] bg-black ">
         <div className="footerframe flex   p-[20px] justify-around w-[100%]">
           <div className="firstline flex  flex-col"><img width={135} src="Super5 logo.png" alt="" />
           <br />
