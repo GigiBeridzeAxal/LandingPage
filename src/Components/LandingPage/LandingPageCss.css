@@ -425,7 +425,9 @@ body{
     .stars{
         gap: 3px;
     }
-
+    .setpdesc {
+        font-size: 15.5px;
+    }
 }
 @media (max-width:531px) {
  
