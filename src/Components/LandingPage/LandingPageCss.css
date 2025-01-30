@@ -22,7 +22,6 @@ body{
 .carousel-container{
     max-width: 100%;
     overflow: hidden;
-    z-index: 25;
 
 }
 .CarouselImages{
@@ -47,21 +46,15 @@ body{
 
   
 }
-img {
-    user-select: none; /* Prevent image selection */
-  }
+
 .customimageSlider{
     max-width: 100%;
     overflow: hidden;
 }
 
-.customimageSlider::-webkit-scrollbar{
-    background: none;
-    width: 3px;
-    height: 3px;
-}
+
 .coverimages{
-    z-index: 15;
+
     background: none;
     position: absolute;
     width: 100%;

@@ -27,14 +27,6 @@ export default function LandingPage() {
   
 
 
-  const [lastcall , setlastcall] = useState([
-    {
-
-        Date:0,
-        LastCall:0
-
-    }
-  ])
 
 
   // Faq List To Show On Screen
@@ -44,8 +36,8 @@ export default function LandingPage() {
       MobileURL:"/Mobile.png"
     },
     {
-      DesktopURL:"/Desktsop.png",
-      MobileURL:"/Mobisle.png"
+      DesktopURL:"/Desktop.png",
+      MobileURL:"/Mobile.png"
     },
 
 
@@ -90,11 +82,21 @@ export default function LandingPage() {
 
 
   const MouseDownSlider = (e) => {
-    e.preventDefault()
+
     SetMouseActivatedimageslider(true)
+  
+  
 
-    setstartximageslider(e.clientX)
+    if(e.clientX !== undefined){
+      setstartximageslider(e.clientX)
 
+    }else{
+      setstartximageslider(e.touches[0].clientX)
+
+
+    }
+
+   
 
   }
 
@@ -105,41 +107,38 @@ export default function LandingPage() {
 
 
 
-
-
-    e.preventDefault()
-   if(startximageslider - e.clientX > 0){
-
-    imagesliderRef.current.scrollTo({
-      left:screenwidth* currentimageslide,
-      behavior: 'smooth',
-    })
-    if(currentimageslide < SliderImages.length){
-      setcurrentimageslide((perv) => perv + 1)
+    if(e.clientX){
+      console.log("sdawd")
     }
+
   
 
-   }else{
 
-
-    imagesliderRef.current.scrollTo({
-      left:screenwidth * (currentimageslide -1),
-      behavior: 'smooth',
-    })
-    if(currentimageslide > 1){
-          setcurrentimageslide((perv) => perv - 1)
-    }
-
-
-   }
- 
   }
+
   const MouseMoveSlider = (e) => {
-    e.preventDefault()
+
     if(MouseAcitvatedimageslider == true ) {
 
+      
 
-      const deltaX = startximageslider - e.clientX;
+      if(e.touches[0].clientX){
+        const deltaX = startximageslider - e.touches[0].clientX;
+    
+        // Determine the scroll direction based on the delta
+        let scrolling = 0;
+        if (deltaX > 0) {
+          scrolling = 1;  // Scrolling left
+        } else if (deltaX < 0) {
+          scrolling = -1;  // Scrolling right
+        }
+       
+        
+          imagesliderRef.current.scrollLeft += (scrolling) * 10
+    
+        }
+      }else{
+           const deltaX = startximageslider - e.clientX;
     
     // Determine the scroll direction based on the delta
     let scrolling = 0;
@@ -153,8 +152,9 @@ export default function LandingPage() {
       imagesliderRef.current.scrollLeft += (scrolling) * 20
 
     }
+      }
+   
 
-  }
   const MosueUPcaptSlider = () => {
 
   }
@@ -162,9 +162,7 @@ export default function LandingPage() {
   const MouseleaveSlider = () => {
     SetMouseActivatedimageslider(false)
   }
-  const MouseOverSlider = (e) => {
-    setstartximageslider(e.clientX)
-  }
+  
 
 
     const settings = {
@@ -307,6 +305,7 @@ export default function LandingPage() {
     }
   
 
+    
   return (
  
 
@@ -343,6 +342,12 @@ onMouseMove={(e) => MouseMoveSlider(e)}
 onMouseUpCapture={MosueUPcaptSlider}
 onMouseLeave={MouseleaveSlider}
 onMouseOverCapture={(e) => MouseOver(e)}
+onTouchStart={(e) => MouseDownSlider(e)}
+onTouchEnd={(e) => MosueUPSlider(e)}
+onTouchMove={(e) => MouseMoveSlider(e)}
+onTouchCancel={(e) => MouseleaveSlider(e)}
+onTouchLeave={(e) => MouseleaveSlider(e)}
+onTouchOver={(e) => MouseOver(e)}
 
 
 
