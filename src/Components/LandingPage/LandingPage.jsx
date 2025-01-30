@@ -81,87 +81,6 @@ export default function LandingPage() {
 
 
 
-  const MouseDownSlider = (e) => {
-
-    SetMouseActivatedimageslider(true)
-  
-  
-
-    if(e.clientX !== undefined){
-      setstartximageslider(e.clientX)
-
-    }else{
-      setstartximageslider(e.touches[0].clientX)
-
-
-    }
-
-   
-
-  }
-
-  const MosueUPSlider = (e) => {
-    SetMouseActivatedimageslider(false)
-
-    let currentslide = 0
-
-
-
-    if(e.clientX){
-      console.log("sdawd")
-    }
-
-  
-
-
-  }
-
-  const MouseMoveSlider = (e) => {
-
-    if(MouseAcitvatedimageslider == true ) {
-
-      
-
-      if(e.touches[0].clientX){
-        const deltaX = startximageslider - e.touches[0].clientX;
-    
-        // Determine the scroll direction based on the delta
-        let scrolling = 0;
-        if (deltaX > 0) {
-          scrolling = 1;  // Scrolling left
-        } else if (deltaX < 0) {
-          scrolling = -1;  // Scrolling right
-        }
-       
-        
-          imagesliderRef.current.scrollLeft += (scrolling) * 10
-    
-        }
-      }else{
-           const deltaX = startximageslider - e.clientX;
-    
-    // Determine the scroll direction based on the delta
-    let scrolling = 0;
-    if (deltaX > 0) {
-      scrolling = 1;  // Scrolling left
-    } else if (deltaX < 0) {
-      scrolling = -1;  // Scrolling right
-    }
-   
-    
-      imagesliderRef.current.scrollLeft += (scrolling) * 20
-
-    }
-      }
-   
-
-  const MosueUPcaptSlider = () => {
-
-  }
-
-  const MouseleaveSlider = () => {
-    SetMouseActivatedimageslider(false)
-  }
   
 
 
@@ -169,6 +88,7 @@ export default function LandingPage() {
 
 
         infinite: true,
+        dots:true,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -312,7 +232,7 @@ export default function LandingPage() {
     <div className="">
 
   
-    <div className="landingpageheader flex bg-black w-[100%] flex items-center justify-center p-[20px]">
+    <div className="landingpageheaderr flex bg-black w-[100%] flex items-center justify-center p-[20px]">
 
 
 
@@ -328,55 +248,13 @@ export default function LandingPage() {
 
 
     </div>
-    <div style={{height: screenheight}} className="carousel-container">
-
-
-
-
-
-       <div ref={imagesliderRef}
-       
-       onMouseDown={(e) => MouseDownSlider(e)} 
-onMouseUp={(e) =>MosueUPSlider(e)}
-onMouseMove={(e) => MouseMoveSlider(e)}
-onMouseUpCapture={MosueUPcaptSlider}
-onMouseLeave={MouseleaveSlider}
-onMouseOverCapture={(e) => MouseOver(e)}
-onTouchStart={(e) => MouseDownSlider(e)}
-onTouchEnd={(e) => MosueUPSlider(e)}
-onTouchMove={(e) => MouseMoveSlider(e)}
-onTouchCancel={(e) => MouseleaveSlider(e)}
-onTouchLeave={(e) => MouseleaveSlider(e)}
-onTouchOver={(e) => MouseOver(e)}
-
-
-
-
- className="customimageSlider flex items-center ">
+    <div className="slider-container">
+      <Slider {...settings}>
         {SliderImages.map(data => (
-
- 
-
-      <img   style={{height: screenheight  }} src={desktop == true ? `${data.DesktopURL}`  : `${data.MobileURL}`} className='CarouselImages w-[100%]' />
-
-
-    
+        <div><img src={desktop == true ? `${data.DesktopURL}` : `${data.MobileURL}` } alt="slide 1" /></div>
         ))}
 
-     
-
-   
-
-       </div>
- 
-   
-
-
- 
-
-
-
-
+      </Slider>
     </div>
 
     <div className="StartPlaying w-[100%] flex items-center justify-center mt-[60px]">

@@ -24,6 +24,18 @@ body{
     overflow: hidden;
 
 }
+.landingpageheaderr{
+    position: absolute;
+    z-index: 5500;
+
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 80px;
+}
+.slick-dots{
+    position: static !important;
+}
 .CarouselImages{
 
 
@@ -52,7 +64,16 @@ body{
     overflow: hidden;
 }
 
-
+.slider-container {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  .slick-slide img {
+    width: 100%;
+    height: 100vh;
+  }
 .coverimages{
 
     background: none;
