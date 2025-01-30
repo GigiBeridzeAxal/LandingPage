@@ -36,6 +36,7 @@ import InputReferalPage from './Components/ReferAndEarn/InputReferalPage';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import LandingPage from './Components/LandingPage/LandingPage';
+import Welcome from './Components/Welcome/Welcome';
 
 function App() {
   const PrivateWrapper = () => {
@@ -48,6 +49,8 @@ function App() {
         <ToastContainer position="top-center" />
         <Routes>
           <Route path="/login" element={<LoginWithPassword />} />
+
+          <Route path="/Welcome" element={<Welcome />} />
           <Route path="/google" element={<LoginWithGoogle />} />
           <Route path="/landingpage" element={<LandingPage/>} />
           <Route path="/email-auth" element={<LoginWithEmail />} />
