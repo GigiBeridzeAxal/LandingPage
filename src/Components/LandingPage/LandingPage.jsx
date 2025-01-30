@@ -35,7 +35,14 @@ export default function LandingPage() {
       DesktopURL:"/Desktop.png",
       MobileURL:"/Mobile.png"
     },
-
+    {
+      DesktopURL:"/Desktop.png",
+      MobileURL:"/Mobile.png"
+    },
+    {
+      DesktopURL:"/Desktop.png",
+      MobileURL:"/Mobile.png"
+    },
 
 
 
