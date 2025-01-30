@@ -57,6 +57,7 @@ body{
     left: 0px;
  
 }
+
 .CarouselImages{
 
 
@@ -424,6 +425,7 @@ body{
     .stars{
         gap: 3px;
     }
+
 }
 @media (max-width:531px) {
  
