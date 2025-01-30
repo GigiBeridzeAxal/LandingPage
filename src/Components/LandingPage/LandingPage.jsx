@@ -14,11 +14,27 @@ export default function LandingPage() {
 
 
   const QuestionsRef = useRef()
+  const imagesliderRef = useRef()
   const [MouseAcitvated , SetMouseActivated] = useState(false)
+  const [MouseAcitvatedimageslider , SetMouseActivatedimageslider] = useState(false)
   const [startx , setstartx] = useState(0)
+  const [startximageslider , setstartximageslider] = useState(1)
   const [currentslide , setcurrentslide] = useState(0)
+  const [currentimageslide , setcurrentimageslide] = useState(0)
+  const [desktop , setdesktop] = useState(true)
+  const [screenheight , setheight]  = useState(800)
+  const [screenwidth , setscreenwidth] = useState(window.innerWidth)
+  
 
 
+  const [lastcall , setlastcall] = useState([
+    {
+
+        Date:0,
+        LastCall:0
+
+    }
+  ])
 
 
   // Faq List To Show On Screen
@@ -31,6 +47,16 @@ export default function LandingPage() {
       DesktopURL:"/Desktop.png",
       MobileURL:"/Mobile.png"
     },
+    {
+      DesktopURL:"/Desktop.png",
+      MobileURL:"/Mobile.png"
+    },
+
+    {
+      DesktopURL:"/Desktop.png",
+      MobileURL:"/Mobile.png"
+    },
+
 
 
 
@@ -68,13 +94,81 @@ export default function LandingPage() {
 
   ])
 
-
-
-  const [desktop , setdesktop] = useState(true)
-  const [screenheight , setheight]  = useState(800)
+    
 
 
 
+  const MouseDownSlider = (e) => {
+    e.preventDefault()
+    SetMouseActivatedimageslider(true)
+
+    setstartximageslider(e.clientX)
+
+
+  }
+
+  const MosueUPSlider = (e) => {
+    SetMouseActivatedimageslider(false)
+
+    let currentslide = 0
+
+
+
+
+
+    e.preventDefault()
+   if(startximageslider - e.clientX > 0){
+
+    imagesliderRef.current.scrollTo({
+      left:screenwidth* currentimageslide,
+      behavior: 'smooth',
+    })
+    setcurrentimageslide((perv) => perv + 1)
+
+
+   }else{
+
+
+    imagesliderRef.current.scrollTo({
+      left:screenwidth * (currentimageslide -1),
+      behavior: 'smooth',
+    })
+    setcurrentimageslide((perv) => perv - 1)
+
+   }
+ 
+  }
+  const MouseMoveSlider = (e) => {
+    e.preventDefault()
+    if(MouseAcitvatedimageslider == true ) {
+
+
+      const deltaX = startximageslider - e.clientX;
+    
+    // Determine the scroll direction based on the delta
+    let scrolling = 0;
+    if (deltaX > 0) {
+      scrolling = 1;  // Scrolling left
+    } else if (deltaX < 0) {
+      scrolling = -1;  // Scrolling right
+    }
+   
+    
+      imagesliderRef.current.scrollLeft += (scrolling) * 5
+
+    }
+
+  }
+  const MosueUPcaptSlider = () => {
+
+  }
+
+  const MouseleaveSlider = () => {
+    SetMouseActivatedimageslider(false)
+  }
+  const MouseOverSlider = (e) => {
+    setstartximageslider(e.clientX)
+  }
 
 
     const settings = {
@@ -138,7 +232,7 @@ export default function LandingPage() {
 
         // Scroll Function For Radio Slider
     const scrollbyradio = (currentslideer) => {
-      console.log(currentslideer)
+
       setcurrentslide(currentslideer )
       QuestionsRef.current.scrollTo({
         left: Math.round(255 * currentslideer ),
@@ -149,7 +243,7 @@ export default function LandingPage() {
 
     const MosueUP = (e) => {
       SetMouseActivated(false)
-      console.log(e , QuestionsRef)
+
 
       let current = 1
       
@@ -244,11 +338,26 @@ export default function LandingPage() {
 
 
 
-       <div className="customimageSlider flex items-center ">
+       <div ref={imagesliderRef}
+       
+       onMouseDown={(e) => MouseDownSlider(e)} 
+onMouseUp={(e) =>MosueUPSlider(e)}
+onMouseMove={(e) => MouseMoveSlider(e)}
+onMouseUpCapture={MosueUPcaptSlider}
+onMouseLeave={MouseleaveSlider}
+onMouseOverCapture={(e) => MouseOver(e)}
+
+
+
+ className="customimageSlider flex items-center ">
         {SliderImages.map(data => (
 
-          <img   style={{height: screenheight  }} src={desktop == true ? `${data.DesktopURL}`  : `${data.MobileURL}`} className='CarouselImages w-[100%]' />
+ 
 
+      <img   style={{height: screenheight  }} src={desktop == true ? `${data.DesktopURL}`  : `${data.MobileURL}`} className='CarouselImages w-[100%]' />
+
+
+    
         ))}
 
      
