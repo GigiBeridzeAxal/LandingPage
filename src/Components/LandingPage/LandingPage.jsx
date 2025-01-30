@@ -35,10 +35,6 @@ export default function LandingPage() {
       DesktopURL:"/Desktop.png",
       MobileURL:"/Mobile.png"
     },
-    {
-      DesktopURL:"/Desktop.png",
-      MobileURL:"/Mobile.png"
-    },
 
 
 
@@ -249,12 +245,16 @@ export default function LandingPage() {
 
     </div>
     <div className="slider-container">
-      <Slider {...settings}>
+      {SliderImages.length > 1 ?       <Slider {...settings}>
         {SliderImages.map(data => (
         <div><img src={desktop == true ? `${data.DesktopURL}` : `${data.MobileURL}` } alt="slide 1" /></div>
         ))}
 
-      </Slider>
+      </Slider> :      
+        SliderImages.map(data => (
+        <div><img className='carouseloneimage' src={desktop == true ? `${data.DesktopURL}` : `${data.MobileURL}` } alt="slide 1" /></div>
+        ))}
+
     </div>
 
     <div className="StartPlaying w-[100%] flex items-center justify-center mt-[60px]">
