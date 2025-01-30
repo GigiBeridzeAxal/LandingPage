@@ -224,19 +224,19 @@ export default function LandingPage() {
 
 
     </div>
-    <div  style={{height:screenheight}} className="carousel-container">
+    <div className="carousel-container">
 
-      <div style={{height:screenheight}} className=''>
+
 
         <Slider  {...settings} dots>
    
-        <img style={{height:screenheight}}  src={desktop == true ? "/Desktop.png"  : "/Mobile.png" } className='CarouselImages w-[100%]' />
-        <img   src={desktop == true ? "/Desktop.png"  : "/Mobile.png" } className='CarouselImages w-[100%]' style={{height:screenheight}} />
+        <img  src={desktop == true ? "/Desktop.png"  : "/Mobile.png" } className='CarouselImages w-[100%]' />
+        <img   src={desktop == true ? "/Desktop.png"  : "/Mobile.png" } className='CarouselImages w-[100%]'  />
 
         </Slider>
 
 
-      </div>
+
  
 
 

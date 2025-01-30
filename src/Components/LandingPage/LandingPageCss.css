@@ -24,6 +24,7 @@ body{
 .carousel-container{
     max-width: 100%;
     overflow: hidden;
+    height: calc(100vh - 80px);
 }
 .CarouselImages{
 
@@ -36,8 +37,9 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     object-fit: fill !important;
-    height: 92vh;
+    height: calc(100vh - 80px);
     width: 100%;
+    overflow: hidden;
 
 
 
