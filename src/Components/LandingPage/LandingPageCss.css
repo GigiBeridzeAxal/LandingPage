@@ -445,6 +445,9 @@ body{
    .stars img{
     width: 20px;
    }
+   .steptittle {
+    font-size: 15.5px;
+   }
 
     
 }
