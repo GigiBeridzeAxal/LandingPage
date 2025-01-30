@@ -22,6 +22,20 @@ export default function LandingPage() {
 
 
   // Faq List To Show On Screen
+  const [SliderImages , setSliderImages] = useState([
+    {
+      DesktopURL:"/Desktop.png",
+      MobileURL:"/Mobile.png"
+    },
+    {
+      DesktopURL:"/Desktop.png",
+      MobileURL:"/Mobile.png"
+    },
+
+
+
+
+  ])
   const [faqs , setfaqs] = useState([
 
     {
@@ -75,6 +89,7 @@ export default function LandingPage() {
         focusOnSelect: true,
         autoplay: true,
         autoplaySpeed: 2000,
+
 
     };
 
@@ -224,17 +239,25 @@ export default function LandingPage() {
 
 
     </div>
-    <div style={{height: `height:${screenheight} !important` }} className="carousel-container">
+    <div style={{height: screenheight}} className="carousel-container">
 
 
 
-        <Slider  {...settings} dots>
+
+       <div className="customimageSlider flex items-center ">
+        {SliderImages.map(data => (
+
+          <img   style={{height: screenheight  }} src={desktop == true ? `${data.DesktopURL}`  : `${data.MobileURL}`} className='CarouselImages w-[100%]' />
+
+        ))}
+
+     
+
    
-        <img style={{height: `height:${screenheight} !important` }} src={desktop == true ? "/Desktop.png"  : "/Mobile.png" } className='CarouselImages w-[100%]' />
-        <img  style={{height: `height:${screenheight} !important` }} src={desktop == true ? "/Desktop.png"  : "/Mobile.png" } className='CarouselImages w-[100%]'  />
 
-        </Slider>
-
+       </div>
+ 
+   
 
 
  

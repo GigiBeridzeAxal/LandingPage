@@ -17,9 +17,7 @@ body{
 }
 
 
-.slick-dots{
-    margin-top: 25pxnp;
-}
+
 
 .carousel-container{
     max-width: 100%;
@@ -37,7 +35,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     object-fit: fill !important;
-    height: calc(100vh - 80px);
+
 
     width: 100%;
     overflow: hidden;
@@ -47,6 +45,16 @@ body{
 
 
   
+}
+
+.customimageSlider{
+    overflow-x: scroll;
+}
+
+.customimageSlider::-webkit-scrollbar{
+    background: none;
+    width: 3px;
+    height: 3px;
 }
 
 .startplaytittle{
