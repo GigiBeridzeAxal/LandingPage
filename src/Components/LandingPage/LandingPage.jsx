@@ -44,17 +44,8 @@ export default function LandingPage() {
       MobileURL:"/Mobile.png"
     },
     {
-      DesktopURL:"/Desktop.png",
-      MobileURL:"/Mobile.png"
-    },
-    {
-      DesktopURL:"/Desktop.png",
-      MobileURL:"/Mobile.png"
-    },
-
-    {
-      DesktopURL:"/Desktop.png",
-      MobileURL:"/Mobile.png"
+      DesktopURL:"/Desktsop.png",
+      MobileURL:"/Mobisle.png"
     },
 
 
@@ -123,8 +114,10 @@ export default function LandingPage() {
       left:screenwidth* currentimageslide,
       behavior: 'smooth',
     })
-    setcurrentimageslide((perv) => perv + 1)
-
+    if(currentimageslide < SliderImages.length){
+      setcurrentimageslide((perv) => perv + 1)
+    }
+  
 
    }else{
 
@@ -133,7 +126,10 @@ export default function LandingPage() {
       left:screenwidth * (currentimageslide -1),
       behavior: 'smooth',
     })
-    setcurrentimageslide((perv) => perv - 1)
+    if(currentimageslide > 1){
+          setcurrentimageslide((perv) => perv - 1)
+    }
+
 
    }
  
@@ -154,7 +150,7 @@ export default function LandingPage() {
     }
    
     
-      imagesliderRef.current.scrollLeft += (scrolling) * 5
+      imagesliderRef.current.scrollLeft += (scrolling) * 20
 
     }
 
@@ -338,6 +334,7 @@ export default function LandingPage() {
 
 
 
+
        <div ref={imagesliderRef}
        
        onMouseDown={(e) => MouseDownSlider(e)} 
@@ -346,6 +343,7 @@ onMouseMove={(e) => MouseMoveSlider(e)}
 onMouseUpCapture={MosueUPcaptSlider}
 onMouseLeave={MouseleaveSlider}
 onMouseOverCapture={(e) => MouseOver(e)}
+
 
 
 
