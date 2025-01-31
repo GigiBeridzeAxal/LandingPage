@@ -1,0 +1,484 @@
+
+
+.landinglogin{
+    border: solid 1px grey;
+    padding: 8px 15px;
+    display: inline-block;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #fff;
+    margin-left: 23px;
+}
+
+
+body{
+
+  
+}
+
+
+
+
+.carousel-container{
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+
+}
+.carouseloneimage{
+    width: 100%;
+    height: calc(100vh - 80px) !important;
+
+}
+.slick-dots {
+    position: absolute;
+    bottom: 25px; /* Moves dots to the top */
+    left: 50%;
+
+    z-index: 10; /* Keeps the dots above the carousel */
+  }
+  .slick-dots li button{
+    color: white !important;
+
+
+  }
+  .slick-dots li button:before {
+    color: white !important; /* Customize the dot color if needed */
+
+    font-size: 18px !important;  
+  }
+
+.slick-dots{
+    position: absolute !important;
+    background: none;
+
+    width: 90px;
+    height: 100px;
+    left: 0px;
+ 
+}
+
+.CarouselImages{
+
+
+
+
+    min-width: 100%;
+    box-sizing: border-box;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: fill !important;
+
+
+    width: 100%;
+    overflow: hidden;
+
+
+
+
+
+  
+}
+
+.customimageSlider{
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.slider-container {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  .slick-slide img {
+    width: 100%;
+    height: calc(100vh - 80px) !important;
+  }
+.coverimages{
+
+    background: none;
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+}
+
+.startplaytittle{
+    font-size: 24px;
+    text-align: center;
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width:1100px) {
+
+    
+}
+.step{
+
+
+    border-radius: 8px;
+    max-width: 350px;
+    height: 160px;
+    font-size: 15px;
+}
+.steps{
+
+    align-items: center;
+
+    gap: 25px;
+}
+.tutorialbox{
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    height: 58px !important;
+    min-height: 58px !important;
+}
+.stepnumber{
+   position: absolute;
+    padding: 10px;
+    width: 35px !important;
+    height: 35px !important;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 18px;
+    top: 15%;
+    left: -22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 35px;
+    min-height: 35px;
+    background-color: rgb(40, 138, 184);
+    border: 2px solid white;
+    color: white;
+    
+}
+.mainstepframe{
+    padding-left: 20px;
+}
+.startplaytittle{
+    font-weight: 700;
+}
+.tutorialbox{
+
+
+    border: 1px solid rgb(223, 223, 223);
+    border-top: none;
+    background-color: white;
+    width: 100%;
+    display: flex;
+    min-width: 239px;
+    font-weight: 700;
+    
+
+
+}
+
+
+
+.howtoplayvideo{
+ 
+    width: 60%;
+
+}
+.questions{
+    overflow: hidden;
+    overflow-x: scroll;
+
+    width: 239px;
+    gap: 15px;
+}
+
+.questions::-webkit-scrollbar{
+    background: none;
+    width: 3px;
+    height: 3px;
+    
+}
+
+.quest{
+    width: 100%;
+    min-width: 239px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+
+}
+
+
+
+.faqquestionframe{
+    border: 1px solid  rgb(203, 203, 203);
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: start;
+
+    justify-content: space-between;
+}
+
+.footer{
+    box-shadow: 2px 2px 2px 2px rgb(203, 203, 203);
+}
+
+.copyright{
+    border-top: 1px solid rgb(238, 238, 238);
+    padding: 20px;
+}
+.footerframe{
+    flex-wrap: wrap;
+    gap: 25px;
+}
+.mainstepframe{
+    height: 77px !important;
+    width: 350px;
+    min-height: 77px !important;
+    background-color: lightgray;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.setpdesc {
+    width: 220px;
+}
+.stepframe{
+    max-height: 120px;
+}
+.stepfirst{
+    max-height: 120px;
+    height: 120px !important;
+}
+.freejoin {
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+.chooser input{
+    width: 10px;
+    height: 10px;
+}
+
+@media (max-width:600px) {
+    .footerframe{
+        flex-wrap: wrap;
+        justify-content: start;
+        gap: 25px;
+    }
+}
+@media (max-width:400px) {
+    .stepframe{
+        min-width: 100%;
+        font-size: 13px;
+    }
+    .stepfirst{
+        width: 90%;
+    }
+
+}
+@media (max-width:487px) {
+    .footerframe{
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        gap: 25px;
+    }
+    
+    .firstline {
+        font-size: 12px;
+    }
+    .firstline strong {
+        font-size: 16px;
+    }
+    .faqquestionframe {
+        width: 100% !important;
+    }
+}
+@media (max-width:300px) {
+    .copyright{
+        font-size: 14px;
+    }
+    .footerframe{
+        flex-wrap: wrap;
+        justify-content: start;
+        gap: 25px;
+    }
+}
+@media (max-width:800px) {
+    .faqquestionframe{
+        width: 100%;}
+}
+.faqframe{
+    width: 100%;
+}
+@media (max-width:1100px) {
+    .CarouselImages{
+        object-fit: cover;
+    }
+}
+@media (max-width:900px) {
+    .CarouselImages{
+        object-fit: fill;
+    }
+}
+@media (max-width:1576px) {
+
+    .steps{
+
+        align-items: center;
+         justify-content: center;
+        gap: 60px;
+        width: 100%;
+    }
+    .startplayingframe {
+        width: 95%;
+    }
+    .faqquestionframe {
+        width: 80%;
+    }
+
+}
+@media (max-width:1300px) {
+    .steps{
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 60px;
+        width: 100%;
+    }
+
+}
+@media (max-width:450px) {
+    .UserRating img{
+        width: 60px;
+    }
+    .howtoplayvideo{
+        width: 100%;
+    }
+    .faqquestionframe {
+        width: 100% !important;
+    }
+
+
+}
+@media (max-width:400px) {
+   
+    .mainstepframe{
+        width: auto;
+        font-size: 12.5px;
+    }
+    .setpdesc{
+        width: auto;
+    }
+
+
+}
+@media (max-width:1050px) {
+
+    .UserRating{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .ratingvalue{
+        font-size: 12px;
+        text-align: center;
+    }
+    .ratingtittle{
+        text-align: center;
+        font-size: 0.8rem !important;
+    }
+    .ratingframe{
+        justify-content: space-around;
+        width: 100%;
+        gap: 10px;
+    }
+
+
+      
+  }
+
+  
+  
+
+@media (max-width:760px) {
+
+    .notmember{
+        display: none;
+    }
+    
+}
+@media (max-width:475px) {
+    .manname{
+        display: none;
+    }
+    .stars{
+        gap: 3px;
+    }
+    .setpdesc {
+        font-size: 15.5px;
+    }
+}
+@media (max-width:531px) {
+ 
+
+   .right{
+    gap: 5px;
+    font-size: 14px;
+   }
+   .landinglogin{
+    margin-left: 0px;
+   }
+   .landingpageheader {
+    width: 100%;
+   }
+   .stars img{
+    width: 20px;
+   }
+   .steptittle {
+    font-size: 15.5px;
+    font-weight: 900;
+   }
+
+    
+}
+
+@media (max-width:367px) {
+
+    .left{
+ 
+     width: 30%;
+ 
+    }
+
+      
+  }
+@media (max-width:313px) {
+
+   .left{
+
+    width: 30%;
+
+   }
+   .right{
+    gap: 5px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+   }
+     
+ }
+ 
+
+
+

@@ -1,0 +1,80 @@
+name: Development Build
+
+on:
+  push:
+    branches:
+      - development
+  pull_request:
+    branches:
+      - development
+    types:
+      - closed
+  repository_dispatch:
+    types: [deploy]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install Dependencies
+        run: npm install --legacy-peer-deps
+
+      - name: Build Project
+        run: npm run build:dev
+
+      - name: Create .ssh Directory on Runner
+        run: mkdir -p ~/.ssh
+
+      - name: Add SSH Key
+        run: |
+          echo "${{ secrets.KEY2 }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+
+      - name: Add VPS Host Key to Known Hosts
+        run: |
+          ssh-keyscan -p 22 82.165.144.52 >> ~/.ssh/known_hosts
+
+      - name: Create Deployment Directory on VPS
+        uses: appleboy/ssh-action@v0.1.7
+        with:
+          host: 82.165.144.52
+          username: root
+          port: 22
+          key: ${{ secrets.KEY2 }}
+          script: |
+            sudo mkdir -p /var/www/dream7-webapp
+            sudo chown -R root:root /var/www/dream7-webapp
+
+      - name: Copy Build to VPS
+        run: |
+          rsync -avz -e "ssh -i ~/.ssh/id_rsa -p 22" build/ root@82.165.144.52:/var/www/dream7-webapp
+
+      - name: List Frontend Files on VPS
+        uses: appleboy/ssh-action@v0.1.7
+        with:
+          host: 82.165.144.52
+          username: root
+          port: 22
+          key: ${{ secrets.KEY2 }}
+          script: |
+            ls -la /var/www/dream7-webapp
+
+      - name: Restart Nginx
+        uses: appleboy/ssh-action@v0.1.7
+        with:
+          host: 82.165.144.52
+          username: root
+          port: 22
+          key: ${{ secrets.KEY2 }}
+          script: |
+            sudo service nginx restart
