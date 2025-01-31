@@ -240,7 +240,7 @@ export default function LandingPage() {
 
 
       <div className="landingpageheader flex items-center justify-between w-[80%]">
-        <div className="left"><img width={120} src="Super5 logo.png" alt="" /></div>
+        <div className="left"><img width={120} src="Logo2.png" alt="" /></div>
         <div className="right flex items-center justify-center gap-[20px] text-white">
             <div className="landingregister flex items-center justify-center gap-[10px] "> <div className="notmember ">Not a Member Yet? </div> <a className='text-red-400' href="/login ">Register Now</a></div>
             <a href='/login' className="landinglogin p-[5px] p-[5px]">Log In</a>
@@ -423,7 +423,7 @@ className="questions flex items-center ">
       </div>
       <div className="footer w-[100%] bg-gray-600 text-white ">
         <div className="footerframe flex   p-[20px] justify-around w-[100%]">
-          <div className="firstline flex  flex-col"><img width={135} src="Super5 logo.png" alt="" />
+          <div className="firstline flex  flex-col"><img width={135} src="Logo2.png" alt="" />
           <br />
           <strong>Address</strong>
           1234 Maple Street, Suite 567, Rivertown, TX 78901
