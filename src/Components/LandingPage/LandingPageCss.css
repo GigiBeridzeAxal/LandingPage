@@ -22,16 +22,16 @@ body {
 }
 .slick-dots {
   position: absolute;
-  bottom: 25px; 
+  bottom: 25px;
   left: 50%;
 
-  z-index: 10; 
+  z-index: 10;
 }
 .slick-dots li button {
   color: white !important;
 }
 .slick-dots li button:before {
-  color: white !important; 
+  color: white !important;
 
   font-size: 18px !important;
 }
@@ -64,14 +64,15 @@ body {
 
 .slider-container {
   width: 100%;
-  margin: 0 auto;
+  margin: 0px auto;
   overflow: hidden;
   margin-top: 60px;
 }
 
-.slick-slide img {
+.slider-container .slick-slide img {
   width: 100%;
-  height: calc(100vh - 80px) !important;
+  margin: 0 auto;
+  overflow: hidden;
 }
 .coverimages {
   background: none;
@@ -87,9 +88,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-@media (max-width: 1100px) {
 }
 .step {
   border-radius: 8px;
@@ -123,13 +121,11 @@ body {
   justify-content: center;
   min-width: 35px;
   min-height: 35px;
-  background-color:#ff8c04;;
+  background-color: #ff8c04;
   border: 2px solid white;
   color: white;
 }
-.mainstepframe {
-  padding-left: 20px;
-}
+
 .startplaytittle {
   font-weight: 700;
 }
@@ -195,24 +191,23 @@ body {
 }
 .mainstepframe {
   height: 77px !important;
-  width: 300px;
+  width: 340px;
   min-height: 77px !important;
-  /* background-color: lightgray; */
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
-  background: linear-gradient(to right, #eee 0, #fff 50%, #eee 100%)!important;
+  background: linear-gradient(to right, #eee 0, #fff 50%, #eee 100%) !important;
   border: 1px solid #dadada;
 }
 .setpdesc {
-  width: 220px;
+  padding-right: 10px;
 }
 .stepframe {
   max-height: 120px;
 }
-.stepfirst {
+/* .stepfirst {
   max-height: 120px;
   height: 120px !important;
-}
+} */
 .freejoin {
   border-bottom-right-radius: 8px;
   border-bottom-left-radius: 8px;
@@ -229,13 +224,15 @@ body {
     gap: 25px;
   }
 }
-@media (max-width: 400px) {
-  .stepframe {
-    min-width: 100%;
-    font-size: 13px;
+@media (max-width: 1024px) {
+  .step {
+    width: 300px;
   }
-  .stepfirst {
-    width: 90%;
+  .steps {
+    width: 100%;
+  }
+  .mainstepframe {
+    width: 300px;
   }
 }
 @media (max-width: 487px) {
@@ -246,7 +243,9 @@ body {
     align-items: start;
     gap: 25px;
   }
-
+  .footerdm {
+    display: none;
+  }
   .firstline {
     font-size: 12px;
   }
@@ -260,6 +259,9 @@ body {
 @media (max-width: 300px) {
   .copyright {
     font-size: 14px;
+  }
+  .footerdm {
+    display: none;
   }
   .footerframe {
     flex-wrap: wrap;
@@ -285,7 +287,7 @@ body {
     object-fit: fill;
   }
 }
-@media (max-width: 1576px) {
+/* @media (max-width: 1576px) {
   .steps {
     align-items: center;
     justify-content: center;
@@ -295,23 +297,39 @@ body {
   .startplayingframe {
     width: 95%;
   }
-  .faqquestionframe {
-    width: 80%;
-  }
-}
-@media (max-width: 1300px) {
+ 
+} */
+/* @media (max-width: 1300px) {
   .steps {
     align-items: center;
     justify-content: center;
     width: 100%;
   }
-}
+} */
 @media (max-width: 450px) {
   .UserRating img {
     width: 60px;
   }
   .howtoplayvideo {
     width: 100%;
+  }
+  .footerdm {
+    display: none;
+  }
+  .steps {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+  }
+  .startplaytittle {
+    font-size: 22px;
+  }
+  .videoclass {
+    padding-top: 100px;
+  }
+  .thirdstep {
+    margin-top: 18px;
   }
   .faqquestionframe {
     width: 100% !important;
@@ -324,6 +342,9 @@ body {
   }
   .setpdesc {
     width: auto;
+  }
+  .footerdm {
+    display: none;
   }
 }
 @media (max-width: 1050px) {
@@ -364,11 +385,17 @@ body {
   .setpdesc {
     font-size: 15.5px;
   }
+  .footerdm {
+    display: none;
+  }
 }
 @media (max-width: 531px) {
   .right {
     gap: 5px;
     font-size: 14px;
+  }
+  .footerdm {
+    display: none;
   }
   .landinglogin {
     margin-left: 0px;
@@ -389,10 +416,16 @@ body {
   .left {
     width: 30%;
   }
+  .footerdm {
+    display: none;
+  }
 }
 @media (max-width: 313px) {
   .left {
     width: 30%;
+  }
+  .footerdm {
+    display: none;
   }
   .right {
     gap: 5px;

@@ -461,7 +461,7 @@ else{
     <div className="flex justify-start items-start px-4 pt-4">
       <img
         className="h-12 w-auto bg-gray-80 rounded"
-        src="/Super5logo.png"
+        src="/assets/newlogo.jpeg"
         alt="Super5"
       />
     </div>
@@ -496,7 +496,7 @@ else{
       <div className="">
         <img
           className="md:mx-auto h-[4.5rem] md:h-20 w-auto bg-gray-80 p-4 rounded"
-          src="/Super5logo.png"
+          src="/assets/newlogo.jpeg"
           alt="Super5"
         />
       </div>

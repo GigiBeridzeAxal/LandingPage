@@ -8,6 +8,7 @@ import Slider from "react-slick";
 import { motion } from "framer-motion";
 import AutoPlaySlider from "../SlideCard/AutoPlaySlider";
 import FantasyPoints from "../FantasyPoint/FantasyPoints";
+import WinPrizeSlider from "../WinPrizeSlider/WinPrizeSlider";
 
 export default function LandingPage() {
   const QuestionsRef = useRef();
@@ -77,7 +78,7 @@ export default function LandingPage() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    draggable: true, // Enables drag functionality
+    draggable: true,
     centerMode: false,
     focusOnSelect: true,
     autoplay: true,
@@ -153,6 +154,7 @@ export default function LandingPage() {
                 <img
                   src={desktop ? data.DesktopURL : data.MobileURL}
                   alt="slide"
+                  className="h-[450px] md:h-[500px] lg:h-[550px] w-full"
                 />
               </div>
             ))}
@@ -161,7 +163,7 @@ export default function LandingPage() {
           SliderImages.map((data, index) => (
             <div key={index}>
               <img
-                className="carouseloneimage"
+                className=" h-[450px] md:h-[500px] lg:h-[550px] w-full"
                 src={desktop ? data.DesktopURL : data.MobileURL}
                 alt="slide"
               />
@@ -169,14 +171,15 @@ export default function LandingPage() {
           ))
         )}
       </section>
-      <section className="w-full min-h-[400px] flex flex-col items-center text-center p-4 bg-gray-100">
-        <div className="startplaytittle flex flex-wrap items-center gap-2 mt-8 text-base md:text-lg lg:text-xl font-semibold">
+
+      <section className="w-full min-h-[400px] flex flex-col -mt-[10px] items-center text-center p-4 bg-gray-100">
+        <div className="startplaytittle flex flex-wrap items-center gap-2 mt-8 text-sm md:text-lg lg:text-xl font-semibold">
           It's 3 simple steps to start playing{" "}
           <span className="sitecol font-bold">on SUPER5</span>
         </div>
 
-        <div className="steps w-[80%] flex flex-col md:flex-row items-center justify-between gap-4 mt-10">
-          <div className="stepfirst step relative ">
+        <div className="steps w-full flex flex-row md:flex-row items-center justify-center gap-4 mt-10">
+          <div className="stepfirst  step relative ">
             <div className="stepframe flex flex-col items-center">
               <div className="mainstepframe gap-3 flex w-full">
                 <div className="stepnumber text-black text-lg font-bold">1</div>
@@ -209,7 +212,7 @@ export default function LandingPage() {
               <AutoPlaySlider />
             </div>
           </div>
-          <div className="stepfirst step relative ">
+          <div className="stepfirst thirdstep step relative ">
             <div className="stepframe flex flex-col items-center">
               <div className="mainstepframe gap-3 flex w-full">
                 <div className="stepnumber text-black text-lg font-bold">3</div>
@@ -221,9 +224,7 @@ export default function LandingPage() {
                 </div>
               </div>
               <div className="tutorialbox flex flex-col items-center justify-center">
-                <strong className="winiphonetittle flex items-center gap-2 p-3 text-lg font-semibold">
-                  Win iPhone <img width={30} src="Iphone.png" alt="iPhone" />
-                </strong>
+                <WinPrizeSlider />
                 <div className="freejoin w-full text-center bg-green-500 text-white  cursor-pointer">
                   Join Free
                 </div>
@@ -261,12 +262,12 @@ export default function LandingPage() {
         <h2 className="faqtittle text-[24px] font-bold mb-5">FAQ</h2>
 
         <div className="faq flex items-center text-[14px] justify-center w-full">
-          <div className=" flex flex-col items-center gap-4 w-[90%] sm:w-[90%] md:w-[90%] lg:w-[100%]">
+          <div className=" flex flex-col items-center gap-4 w-[95%] sm:w-[95%] md:w-[80%] lg:w-[80%]">
             {faqs.map((data, ind) => (
               <motion.button
                 key={ind}
                 onClick={() => HandleOpen(ind)}
-                className="faqquestionframe relative w-full bg-gray-100 p-4 rounded-lg shadow-md"
+                className="faqquestionframe relative w-[80%] sm:w-[90%] md:w-[80%] lg:w-[80%] bg-gray-100 p-4 rounded-lg shadow-md"
               >
                 <div className="faqquest flex items-center justify-between w-full">
                   {data.QuestionTittle}
@@ -296,7 +297,7 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
-      <div className="footer w-[100%] bg-gray-600 text-white ">
+      <div className="footer footerdm w-[100%] bg-gray-600 text-white ">
         <div className="footerframe flex   p-[20px] justify-between m-auto w-[80%]">
           <div className="firstline flex  flex-col">
             <img width={135} src="Super5 logo.png" alt="" />
@@ -338,6 +339,45 @@ export default function LandingPage() {
           Copyright @2025 all rights reserved
         </div>
       </div>
+      <div className="footer w-full bg-gray-600 text-white block md:hidden lg:hidden">
+  <div className="flex justify-center py-4">
+    <img width={135} src="Super5 logo.png" alt="Super5 Logo" />
+  </div>
+<div className="flex w-full flex-row mt-[20px] justify-between gap-4">
+  <div className="w-1/2 flex flex-col items-center sm:items-start text-center sm:text-left text-sm">
+    <strong>Address</strong>
+    <p>1234 Maple Street, Suite 567, Rivertown, TX 78901</p>
+    <div className="justify-start mt-4">Socials</div>
+    <div className="flex justify-start items-center gap-3">
+      <a href=""><img width={30} src="Facebook.png" alt="Facebook" /></a>
+      <a href=""><img width={30} src="Instagram.png" alt="Instagram" /></a>
+    </div>
+  </div>
+  <div className="w-1/2 flex flex-col items-center sm:items-start text-center sm:text-left text-sm">
+    <strong className="text-lg">Navigate</strong>
+    <a href="#">About Us</a>
+    <a href="#">How to Play</a>
+    <a href="#">FAQ</a>
+    <a href="#">Contact Us</a>
+  </div>
+</div>
+
+    <div className="flex w-full flex-row mt-[20px] justify-between gap-4">
+      <div className="w-1/2 flex flex-col items-center sm:items-start text-center sm:text-left text-sm">
+        <strong className="text-lg">Legal</strong>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+      <div className="w-1/2 flex flex-col items-center sm:items-start text-center sm:text-left text-sm">
+        <strong className="text-lg">Support</strong>
+        <a href="#">Contact Us</a>
+      </div>
+    </div>
+  <div className="copyright flex items-center justify-center bg-black p-3 mt-6 text-sm">
+    Copyright @2025 all rights reserved
+  </div>
+</div>
+
     </div>
   );
 }
