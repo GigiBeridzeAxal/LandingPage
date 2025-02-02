@@ -40,7 +40,7 @@ import Welcome from './Components/Welcome/Welcome';
 
 function App() {
   const PrivateWrapper = () => {
-    return isAuthenticated() ? <Outlet /> : <Navigate to="/landingpage" />;
+    return isAuthenticated() ? <Outlet /> : <Navigate to="/welcome" />;
   };
 
   return (
@@ -50,9 +50,9 @@ function App() {
         <Routes>
           <Route path="/login" element={<LoginWithPassword />} />
 
-          <Route path="/Welcome" element={<Welcome />} />
+          {/* <Route path="/Welcome" element={<Welcome />} /> */}
           <Route path="/google" element={<LoginWithGoogle />} />
-          <Route path="/landingpage" element={<LandingPage/>} />
+          <Route path="/welcome" element={<LandingPage/>} />
           <Route path="/email-auth" element={<LoginWithEmail />} />
           <Route path="/phone-auth" element={<LoginWithPhone />} />
           <Route path="/onboarding/1" element={<InputReferalPage />} />

@@ -100,26 +100,20 @@ const FantasyPoints = () => {
   const formats = Object.keys(fantasyData[activeTab]);
 
   return (
-    <section className="w-full min-h-screen flex flex-col items-center bg-gradient-to-b from-gray-100 to-gray-300 py-8 px-4 md:px-6 lg:px-8">
+    <section className="w-full min-h-screen flex flex-col items-center bg-gradient-to-b from-gray-100 to-gray-300 py-24 md:py-8 lg:py-8 px-4 md:px-6 lg:px-8">
       <h2 className="text-2xl md:text-3xl font-bold text-black text-center">
         Fantasy <span className="sitecol">Points</span>
       </h2>
       <p className="text-gray-600 text-sm md:text-base text-center mt-2 max-w-lg">
         Based on the below points, top players will be decided for each match
       </p>
-
-      {/* Main Container */}
       <div className="flex flex-col md:flex-row w-full max-w-5xl bg-white shadow-lg mt-6 rounded-lg overflow-hidden">
-        {/* Video Placeholder */}
-        <div className="w-full md:w-1/3 bg-black flex items-center justify-center text-white text-lg h-52 md:h-auto p-2">
-          <iframe
-            className="w-full max-w-[400px] h-[200px] sm:h-[250px] md:h-[300px] lg:h-[350px] xl:h-[400px] rounded-lg shadow-lg"
-            src="https://www.youtube.com/embed/q5DSFO8rA2o"
-            title="Super5.live"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-          ></iframe>
+        <div className="w-full md:w-1/3 lg:block md:block hidden bg-black flex items-center justify-center text-white text-lg h-52 md:h-auto p-2">
+          <img
+            className="w-full max-w-[400px] h-[200px] sm:h-[250px] md:h-[300px] lg:h-[350px] xl:h-[400px] rounded-lg shadow-lg object-cover"
+            src="/fantasy.png"
+            alt="Super5.live"
+          />
         </div>
 
         {/* Points Table */}

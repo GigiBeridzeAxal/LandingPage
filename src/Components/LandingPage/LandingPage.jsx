@@ -154,7 +154,7 @@ export default function LandingPage() {
                 <img
                   src={desktop ? data.DesktopURL : data.MobileURL}
                   alt="slide"
-                  className="h-[450px] md:h-[500px] lg:h-[550px] w-full"
+                  className="h-[480px] md:h-[500px] lg:h-[550px] w-full"
                 />
               </div>
             ))}
@@ -163,7 +163,7 @@ export default function LandingPage() {
           SliderImages.map((data, index) => (
             <div key={index}>
               <img
-                className=" h-[450px] md:h-[500px] lg:h-[550px] w-full"
+                className=" h-[480px] md:h-[500px] lg:h-[550px] w-full"
                 src={desktop ? data.DesktopURL : data.MobileURL}
                 alt="slide"
               />
@@ -172,7 +172,7 @@ export default function LandingPage() {
         )}
       </section>
 
-      <section className="w-full min-h-[400px] flex flex-col -mt-[10px] items-center text-center p-4 bg-gray-100">
+      <section className="w-full min-h-[300px] flex flex-col -mt-[10px] items-center text-center p-4 bg-gray-100">
         <div className="startplaytittle flex flex-wrap items-center gap-2 mt-8 text-sm md:text-lg lg:text-xl font-semibold">
           It's 3 simple steps to start playing{" "}
           <span className="sitecol font-bold">on SUPER5</span>
@@ -209,7 +209,10 @@ export default function LandingPage() {
                   </p>
                 </div>
               </div>
+              <div className="tutorialbox p-5 flex items-center justify-around w-full">
               <AutoPlaySlider />
+              </div>
+              
             </div>
           </div>
           <div className="stepfirst thirdstep step relative ">
@@ -258,7 +261,7 @@ export default function LandingPage() {
       <section className="fantasypoint">
         <FantasyPoints />
       </section>
-      <section className="faq-section flex flex-col items-center justify-center w-full py-10">
+      <section className="faq-section md:mt-0 lg:mt-0 -mt-[60px] flex flex-col items-center justify-center w-full py-10">
         <h2 className="faqtittle text-[24px] font-bold mb-5">FAQ</h2>
 
         <div className="faq flex items-center text-[14px] justify-center w-full">
@@ -339,44 +342,60 @@ export default function LandingPage() {
           Copyright @2025 all rights reserved
         </div>
       </div>
-      <div className="footer w-full bg-gray-600 text-white block md:hidden lg:hidden">
-  <div className="flex justify-center py-4">
-    <img width={135} src="Super5 logo.png" alt="Super5 Logo" />
-  </div>
-<div className="flex w-full flex-row mt-[20px] justify-between gap-4">
-  <div className="w-1/2 flex flex-col items-center sm:items-start text-center sm:text-left text-sm">
-    <strong>Address</strong>
-    <p>1234 Maple Street, Suite 567, Rivertown, TX 78901</p>
-    <div className="justify-start mt-4">Socials</div>
-    <div className="flex justify-start items-center gap-3">
-      <a href=""><img width={30} src="Facebook.png" alt="Facebook" /></a>
-      <a href=""><img width={30} src="Instagram.png" alt="Instagram" /></a>
-    </div>
-  </div>
-  <div className="w-1/2 flex flex-col items-center sm:items-start text-center sm:text-left text-sm">
-    <strong className="text-lg">Navigate</strong>
-    <a href="#">About Us</a>
-    <a href="#">How to Play</a>
-    <a href="#">FAQ</a>
-    <a href="#">Contact Us</a>
-  </div>
-</div>
+      <div className="footer w-full bg-gray-600 text-white mx-auto block md:hidden lg:hidden">
+        <div className="flex flex-col items-center justify-center py-8">
+          <img
+            width={135}
+            src="Super5 logo.png"
+            alt="Super5 Logo"
+            className="mb-2"
+          />
+          <p className="text-lg my-3 flex justify-center items-center text-center w-full">
+            1234 Maple Street, Suite 567, Rivertown, TX 78901
+          </p>
 
-    <div className="flex w-full flex-row mt-[20px] justify-between gap-4">
-      <div className="w-1/2 flex flex-col items-center sm:items-start text-center sm:text-left text-sm">
-        <strong className="text-lg">Legal</strong>
-        <a href="#">Terms & Conditions</a>
-        <a href="#">Privacy Policy</a>
+          <div className="flex justify-start items-center gap-3">
+            <a href="">
+              <img width={30} src="Facebook.png" alt="Facebook" />
+            </a>
+            <a href="">
+              <img width={30} src="Instagram.png" alt="Instagram" />
+            </a>
+          </div>
+        </div>
+        <div className="flex flex-col ml-[20px]   items-center w-full mx-auto mt-[20px] gap-6">
+          <div className="flex w-full  justify-between gap-6">
+            <div className="w-1/2 flex flex-col items-start text-left text-sm">
+              <strong className="text-2xl sitecol">Navigate</strong>
+              <a href="#" className="py-1 text-lg">
+                About Us
+              </a>
+              <a href="#" className="py-1 text-lg">
+                How to Play
+              </a>
+              <a href="#" className="py-1 text-lg">
+                FAQ
+              </a>
+              <a href="#" className="py-1 text-lg">
+                Contact Us
+              </a>
+            </div>
+            <div className="w-1/2 flex flex-col mr-[20px] items-start text-left text-sm">
+              <strong className="text-2xl sitecol">Legal</strong>
+              <a href="#" className="py-1 text-lg">
+                Terms & Conditions
+              </a>
+              <a href="#" className="py-1 text-lg">
+                Privacy Policy
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="copyright flex items-center justify-center bg-black p-3 mt-6 text-sm">
+          Copyright @2025 all rights reserved
+        </div>
       </div>
-      <div className="w-1/2 flex flex-col items-center sm:items-start text-center sm:text-left text-sm">
-        <strong className="text-lg">Support</strong>
-        <a href="#">Contact Us</a>
-      </div>
-    </div>
-  <div className="copyright flex items-center justify-center bg-black p-3 mt-6 text-sm">
-    Copyright @2025 all rights reserved
-  </div>
-</div>
 
     </div>
   );
